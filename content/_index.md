@@ -1,6 +1,6 @@
 +++
 title = "Clear inputs. Clear outputs."
-description = "We take difficult problems and ship systems with honest edges: what goes in, what comes out, and who holds the records. The product can run without a screen."
+description = "We take difficult problems and ship systems with honest edges: what goes in, what comes out, and who holds the records. We build and monitor products that run without a screen."
 
 [extra]
 home_layout = "wide"

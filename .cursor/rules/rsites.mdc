@@ -1,0 +1,14 @@
+---
+description: rsites site policy — Zola + DevLab, never edit themes, verify with rsites check.
+alwaysApply: true
+---
+
+# rsites
+
+This directory is an rsites-generated Zola site (DevLab theme).
+
+- Edit content under `content/` and site config in `zola.toml` / `rsites.toml`.
+- Do not edit `themes/` or `public/`.
+- After content or nav changes, run `rsites check` (preview with `rsites serve`).
+- Follow `AGENTS.md` and the page schema in `.cursor/rules/content.mdc`.
+- If `rsites.toml` has `[project]`, read that git repo for facts and write pages here.

@@ -1,0 +1,38 @@
+---
+description: Zola/DevLab page schema for rsites content trees.
+globs: content/**/*.md
+alwaysApply: false
+---
+
+# Content schema
+
+Use TOML frontmatter with `+++` only (not YAML `---`).
+
+## Paths
+
+| Path | Kind | Required frontmatter |
+| --- | --- | --- |
+| `content/_index.md` | Home | `title`, `description`, `[extra]` home_* keys |
+| `content/docs/_index.md` | Docs section | `title`, `description`, `sort_by = "weight"`, `template = "docs.html"`, `page_template = "doc-page.html"` |
+| `content/docs/**/*.md` | Doc page | `title`, `description`, `weight` |
+| `content/blog/YYYY-MM-DD-slug.md` | Blog post | `title`, `description`, `date` (only if Blog is enabled) |
+
+Nested docs sections need their own `_index.md` with the same section fields as `content/docs/_index.md`.
+
+## Doc page template
+
++++
+title = "Short title"
+description = "One sentence."
+weight = 10
++++
+
+## Nav
+
+New top-level sections need a link in `[extra.devlab.navigation]` in `zola.toml`.
+
+
+Do not put raw `{%` or `{{` in Markdown unless wrapped in `{% raw %}`.
+
+
+After edits: `rsites check`.

@@ -1,0 +1,110 @@
+/* Quad palette. Espresso, paper, ink, stone, and logo blue from quad.io. */
+
+:root,
+:root[data-theme="light"],
+html[data-brand="quad"],
+html[data-brand="quad"][data-theme="light"] {
+  --color-bg: #ffffff;
+  --color-surface: #f4f2f0;
+  --color-fg: #1c1c1c;
+  --color-muted: #9c9999;
+  --color-border: #e4e0dc;
+  --color-accent: #005cc7;
+  --color-accent-contrast: #ffffff;
+  --shadow-color: 32 26 22;
+  --color-code-bg: #f0eeec;
+  --color-code-fg: #1c1c1c;
+  --color-pre-bg: #f7f6f4;
+  --color-pre-fg: #1c1c1c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root,
+  html[data-brand="quad"] {
+    --color-bg: #201a16;
+    --color-surface: #2c241e;
+    --color-fg: #f7f6f4;
+    --color-muted: #9c9999;
+    --color-border: #3d342c;
+    --color-accent: #4aa0e8;
+    --color-accent-contrast: #201a16;
+    --shadow-color: 0 0 0;
+    --color-code-bg: #2c241e;
+    --color-code-fg: #f7f6f4;
+    --color-pre-bg: #161210;
+    --color-pre-fg: #f7f6f4;
+  }
+}
+
+:root[data-theme="dark"],
+html[data-brand="quad"][data-theme="dark"] {
+  --color-bg: #201a16;
+  --color-surface: #2c241e;
+  --color-fg: #f7f6f4;
+  --color-muted: #9c9999;
+  --color-border: #3d342c;
+  --color-accent: #4aa0e8;
+  --color-accent-contrast: #201a16;
+  --shadow-color: 0 0 0;
+  --color-code-bg: #2c241e;
+  --color-code-fg: #f7f6f4;
+  --color-pre-bg: #161210;
+  --color-pre-fg: #f7f6f4;
+}
+
+html[data-brand="quad"] {
+  --font-sans:
+    "Avenir Next",
+    "Century Gothic",
+    Futura,
+    "Tw Cen MT",
+    "Trebuchet MS",
+    system-ui,
+    sans-serif;
+}
+
+html[data-brand="quad"] .button {
+  border-radius: 2px;
+}
+
+html[data-brand="quad"] .hero-wide {
+  border-radius: 8px;
+}
+
+html[data-brand="quad"] .hero-with-media .hero-title {
+  max-width: 14ch;
+}
+
+html[data-brand="quad"] .hero-media {
+  padding-block-start: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #201a16;
+}
+
+html[data-brand="quad"] .hero-media::before {
+  content: none;
+}
+
+html[data-brand="quad"] .hero-media img {
+  border-block-start: 0;
+}
+
+html[data-brand="quad"] .home-page .feature-card,
+html[data-brand="quad"] .home-learn-card,
+html[data-brand="quad"] .home-learn-cta,
+html[data-brand="quad"] .home-learn-split {
+  border-radius: 8px;
+}
+
+html[data-brand="quad"] #approach {
+  scroll-margin-top: calc(var(--header-height) + var(--space-6));
+}
+
+html[data-brand="quad"] .home-page-wide .hero-wide + .feature-grid {
+  margin-top: calc(var(--space-12) * -1);
+}
+
+html[data-brand="quad"] .home-learn {
+  padding-top: var(--space-16);
+}

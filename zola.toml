@@ -1,0 +1,46 @@
+base_url = "https://www.quad.io"
+title = "Quad.io"
+description = "Clear inputs. Clear outputs. Screenless systems for sovereign data."
+theme = "devlab-theme"
+
+compile_sass = true
+
+[markdown.highlighting]
+light_theme = "github-light"
+dark_theme = "github-dark"
+
+[extra.brand]
+id = "quad"
+
+[extra.devlab.brand]
+logo_text = "Quad.io"
+footer_text = "Quad.io"
+show_logo_mark = true
+logo_mark_path = "/brand/quad.svg"
+
+[extra.devlab.footer]
+show = true
+note = "Clear inputs. Clear outputs. Made in Atlanta, GA."
+links_label = "Contact"
+links = [
+  { name = "Email", path = "mailto:hello@quad.io", icon = "email" },
+]
+
+[extra.devlab.navigation]
+links = [
+  { name = "Home", path = "/" },
+  { name = "Approach", path = "#approach" },
+  { name = "Contact", path = "mailto:hello@quad.io" },
+]
+
+[extra.devlab.docs]
+section = "docs/_index.md"
+path = "/docs/"
+get_started_path = "/docs/getting-started/"
+
+[extra.devlab.appearance]
+default_mode = "system"
+show_toggle = true
+
+[extra.devlab.search]
+enabled = false

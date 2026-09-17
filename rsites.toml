@@ -1,0 +1,14 @@
+name = "quadio-site"
+hostname = "www.quad.io"
+base_url = "https://www.quad.io"
+
+[theme]
+name = "devlab-theme"
+url = "https://codeberg.org/RiPetitor/devlab-theme"
+tag = "v0.7.0"
+commit = "8fea270cd282e4b0137fb39ae63603698509b6fa"
+mode = "submodule"
+
+[caddy]
+root = "/var/www/quadio-site"
+tls = true

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="Clear input enters a bounded system and leaves as a clear output.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="An input enters a bounded system and leaves as an inspectable result.">
   <rect width="1280" height="720" fill="#201A16"/>
   <g fill="none" stroke="#3D342C" stroke-width="1">
     <path d="M80 120 H1200"/>
@@ -48,6 +48,6 @@
   <g>
     <rect x="924" y="328" width="176" height="128" rx="10" fill="#005CC7"/>
     <text x="1012" y="390" text-anchor="middle" fill="#FFFFFF" font-family="Avenir Next, Century Gothic, Futura, Trebuchet MS, sans-serif" font-size="22" font-weight="700">result</text>
-    <text x="1012" y="420" text-anchor="middle" fill="#D6E7FA" font-family="Avenir Next, Century Gothic, Futura, Trebuchet MS, sans-serif" font-size="14">owned, inspectable</text>
+    <text x="1012" y="420" text-anchor="middle" fill="#D6E7FA" font-family="Avenir Next, Century Gothic, Futura, Trebuchet MS, sans-serif" font-size="14">inspectable</text>
   </g>
 </svg>

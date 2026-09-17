@@ -1,10 +1,8 @@
 +++
 title = "Getting started"
-description = "Preview this site locally with rsites."
+description = "Preview the site locally with rsites."
 weight = 1
 +++
-
-You will have a local preview by the end of this page.
 
 ## Requirements
 
@@ -18,4 +16,4 @@ You will have a local preview by the end of this page.
 rsites serve
 ```
 
-Open the address printed by Zola. Production hosting uses Caddy against the `public/` directory after `rsites build`.
+Open the address Zola prints. Production is Caddy serving `public/` after `rsites build`.

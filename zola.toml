@@ -1,6 +1,6 @@
 base_url = "https://www.quad.io"
 title = "Quad.io"
-description = "Clear inputs. Clear outputs. Screenless systems for sovereign data."
+description = "Quad.io builds screenless systems with honest I/O and records that stay in your custody."
 theme = "devlab-theme"
 
 compile_sass = true
@@ -20,7 +20,7 @@ logo_mark_path = "/brand/quad.svg"
 
 [extra.devlab.footer]
 show = true
-note = "Clear inputs. Clear outputs. Made in Atlanta, GA."
+note = "Made in Atlanta, GA."
 links_label = "Contact"
 links = [
   { name = "Email", path = "mailto:hello@quad.io", icon = "email" },

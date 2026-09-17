@@ -1,0 +1,15 @@
+# Installed to /etc/caddy/sites-enabled/quadio-site.caddy
+# The www block matches `rsites caddy render --snippet` (hostname + caddy.root
+# from rsites.toml). Apex redirect is extra so quad.io reaches the same site.
+# Bootstrap rewrites placeholder.example.com (and apex.example.com) when you
+# pass --domain.
+placeholder.example.com {
+	encode gzip zstd
+	root * /var/www/quadio-site
+	try_files {path} {path}/ /404.html
+	file_server
+}
+
+apex.example.com {
+	redir https://placeholder.example.com{uri} permanent
+}

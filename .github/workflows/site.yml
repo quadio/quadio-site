@@ -1,0 +1,120 @@
+name: Site
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      bootstrap:
+        description: First-time droplet setup (Caddy virtual host, firewall)
+        type: boolean
+        default: false
+      domain:
+        description: Caddy virtual host (bootstrap only; default www.quad.io)
+        required: false
+        type: string
+
+concurrency:
+  group: site-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Install Zola
+        uses: taiki-e/install-action@v2
+        with:
+          tool: zola@0.23.4
+
+      - name: Check
+        run: zola check
+
+      - name: Build
+        run: zola build
+
+      - name: Pack public/
+        run: |
+          set -euo pipefail
+          mkdir -p dist
+          tar -C public -czf dist/quadio-site.tar.gz .
+          (cd dist && sha256sum quadio-site.tar.gz > quadio-site.tar.gz.sha256)
+
+      - name: Upload public/
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: public/
+
+      - name: Upload archive
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-archive
+          path: dist/quadio-site.tar.gz*
+
+  deploy:
+    name: DigitalOcean droplet
+    needs: build
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref == 'refs/heads/master')
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - id: cfg
+        env:
+          HOST: ${{ secrets.DROPLET_HOST }}
+          USER: ${{ secrets.DROPLET_USER }}
+          KEY: ${{ secrets.DROPLET_SSH_KEY }}
+        run: |
+          if [ -z "${HOST:-}" ] || [ -z "${USER:-}" ] || [ -z "${KEY:-}" ]; then
+            echo "DROPLET_HOST / DROPLET_USER / DROPLET_SSH_KEY not set; skipping"
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Download archive
+        if: steps.cfg.outputs.skip != 'true'
+        uses: actions/download-artifact@v4
+        with:
+          name: site-archive
+          path: dist
+      - name: Load SSH key
+        if: steps.cfg.outputs.skip != 'true'
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.DROPLET_SSH_KEY }}
+        run: bash deploy/load-ssh-key.sh
+      - name: Push site over SSH
+        if: steps.cfg.outputs.skip != 'true'
+        env:
+          HOST: ${{ secrets.DROPLET_HOST }}
+          USER: ${{ secrets.DROPLET_USER }}
+          SITE_SSH_PORT: ${{ secrets.DROPLET_SSH_PORT }}
+          KNOWN: ${{ secrets.DROPLET_SSH_KNOWN_HOSTS }}
+          BOOTSTRAP: ${{ github.event_name == 'workflow_dispatch' && inputs.bootstrap || false }}
+          DOMAIN: ${{ github.event_name == 'workflow_dispatch' && inputs.domain || '' }}
+        run: |
+          set -euo pipefail
+          chmod +x deploy/digitalocean/push.sh deploy/digitalocean/bootstrap.sh \
+            deploy/digitalocean/install.sh deploy/digitalocean/configure-caddy.sh
+          mkdir -p "$HOME/.ssh"
+          chmod 700 "$HOME/.ssh"
+          if [ -n "${KNOWN:-}" ]; then
+            printf '%s\n' "$KNOWN" > "$HOME/.ssh/known_hosts"
+            chmod 600 "$HOME/.ssh/known_hosts"
+            export SITE_SSH_KNOWN_HOSTS="$HOME/.ssh/known_hosts"
+          fi
+          ARGS=(--archive dist/quadio-site.tar.gz)
+          if [ "$BOOTSTRAP" = "true" ]; then
+            ARGS+=(--bootstrap --domain "${DOMAIN:-www.quad.io}")
+          fi
+          ./deploy/digitalocean/push.sh "${ARGS[@]}" "${USER}@${HOST}"

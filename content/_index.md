@@ -4,16 +4,16 @@ description = "We take difficult problems and ship systems with honest edges: wh
 
 [extra]
 home_layout = "wide"
-home_eyebrow = "Atlanta studio"
+home_eyebrow = "Product Engineering"
 home_hero_image = "/images/hero/io.svg"
-home_hero_image_alt = "Inputs enter a bounded Quad system and leave as an inspectable result."
+home_hero_image_alt = "Inputs enter a bounded system and leave as an inspectable result."
 home_primary_action_label = "Talk to us"
 home_primary_action_path = "mailto:hello@quad.io"
 home_secondary_action_label = "Approach"
 home_secondary_action_path = "#approach"
 home_features = [
-  { kicker = "Contract", title = "Honest edges", description = "Scope is written before work starts. If a step cannot be named, it does not ship." },
-  { kicker = "Interface", title = "Screenless", description = "Agents can configure and operate the system; people review when judgment is required. Headless is the default." },
+  { kicker = "Contract", title = "Honest edges", description = "Scope and Architecture Defined. Ship only what is necessary." },
+  { kicker = "Interface", title = "Screenless", description = "Agents can configure and operate the system; human review when judgment is required. Headless is the goal." },
   { kicker = "Custody", title = "Sovereign data", description = "MIT-licensed software, local by default, in formats you can export. Custody is the design." },
 ]
 

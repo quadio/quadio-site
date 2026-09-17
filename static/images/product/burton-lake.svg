@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="Burton Workspaces: a lake, ridges, and still water.">
+  <defs>
+    <linearGradient id="bw-sky" x1="240" y1="0" x2="240" y2="203" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9eb8d0"/>
+      <stop offset="1" stop-color="#e7f2f8"/>
+    </linearGradient>
+    <linearGradient id="bw-water" x1="240" y1="203" x2="240" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d4e6f2"/>
+      <stop offset="0.45" stop-color="#8fb4ce"/>
+      <stop offset="1" stop-color="#5e8fb0"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="203" fill="url(#bw-sky)"/>
+  <rect y="203" width="480" height="157" fill="url(#bw-water)"/>
+  <path fill="#16324f" d="M0 228 186.6 92.8 240 168.8 301.9 81.6 480 228H0Z"/>
+  <path fill="#1c3d5c" d="M101 225 212 160 240 194 277 146 330 225H101Z"/>
+  <path fill="#12283f" d="M70 228 90 189 100 204 111 182 127 228H70Z"/>
+  <path fill="#12283f" d="M232 228 250 189 259 207 271 181 294 228H232Z"/>
+  <g opacity=".5" transform="matrix(1 0 0 -.62 0 351.4)">
+    <path fill="#16324f" d="M0 228 186.6 92.8 240 168.8 301.9 81.6 480 228H0Z"/>
+  </g>
+  <ellipse cx="240" cy="211" rx="112" ry="19" fill="#f7fbfe" opacity=".85"/>
+</svg>

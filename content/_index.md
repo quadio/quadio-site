@@ -17,26 +17,15 @@ home_features = [
   { kicker = "Ownership", title = "Sovereign data", description = "MIT Licenced software and records that stay yours. Local by default. Portable formats. No lock-in dressed up as a product." },
 ]
 
-[extra.home_learn]
-eyebrow = "How we work"
-title = "A bounded system, not a pile of screens"
-description = "Quad.io builds products and services as transformations: gather what is known, run a designed process, return something you can verify."
-cards = [
-  { kicker = "Input", title = "Name what goes in", description = "Signals, events, records, or state — declared before work starts, so the problem stays small enough to solve well." },
-  { kicker = "Bound", title = "Keep the system closed", description = "The work happens inside a boundary you can see. Elegant internals. No extra surface area for its own sake." },
-  { kicker = "Data", title = "You own the store", description = "Files, databases, and keys remain under your control. We design for custody, not capture." },
-  { kicker = "Output", title = "Inspect what comes out", description = "Results are concrete: a file, a feed, an action, a decision. If you cannot check it, it is not done." },
-]
-
-[extra.home_workflow]
-eyebrow = "Workflow"
-title = "Build, run headless, keep the data"
-description = "The same shape every time. Complexity stays in the system. The operator sees inputs and outputs."
-points = [
-  { title = "Design the contract", description = "Write the input, the output, and the constraints. Hard problems get simpler when the edges are honest." },
-  { title = "Run without a screen", description = "Ship a service, a pipeline, or a device that works in the background. UI is optional, never the product." },
-  { title = "Leave custody with you", description = "Data stays in formats you can move. No proprietary silo between you and what you produced." },
-]
+[extra.home_product]
+eyebrow = "Product"
+title = "Burton Workspaces"
+badge = "MIT License"
+description = "Open-source business automation. A team wiki, messages, and knowledge that compound from people and agents. Self-host or run it managed. You keep the data."
+image = "/images/product/burton-lake.svg"
+image_alt = "Lake Burton ridges and pines reflected in still water."
+cta_label = "Visit Burton"
+cta_path = "https://www.burtonapp.com"
 
 [extra.home_cta]
 title = "Start with a clear problem"

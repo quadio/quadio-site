@@ -1,0 +1,68 @@
+{# Site overlay: Burton Workspaces product panel. #}
+{% if has_home_product %}
+{% set home_product = none %}
+{% if section.extra.home_product is defined %}
+{% set home_product = section.extra.home_product %}
+{% elif config.extra.home_product is defined %}
+{% set home_product = config.extra.home_product %}
+{% endif %}
+{% set_global product_eyebrow = "Product" %}
+{% set_global product_title = "Burton Workspaces" %}
+{% set_global product_description = "" %}
+{% set_global product_badge = "MIT License" %}
+{% set_global product_cta_label = "Visit Burton" %}
+{% set_global product_cta_path = "https://www.burtonapp.com" %}
+{% set_global product_image = "" %}
+{% set_global product_image_alt = "" %}
+{% if home_product %}
+{% if home_product.eyebrow is defined %}{% set_global product_eyebrow = home_product.eyebrow %}{% endif %}
+{% if home_product.title is defined %}{% set_global product_title = home_product.title %}{% endif %}
+{% if home_product.description is defined %}{% set_global product_description = home_product.description %}{% endif %}
+{% if home_product.badge is defined %}{% set_global product_badge = home_product.badge %}{% endif %}
+{% if home_product.cta_label is defined %}{% set_global product_cta_label = home_product.cta_label %}{% endif %}
+{% if home_product.cta_path is defined %}{% set_global product_cta_path = home_product.cta_path %}{% endif %}
+{% if home_product.image is defined %}{% set_global product_image = home_product.image %}{% endif %}
+{% if home_product.image_alt is defined %}{% set_global product_image_alt = home_product.image_alt %}{% endif %}
+{% endif %}
+
+<section class="home-product{% if product_image %} home-product-with-media{% endif %}" id="product" aria-labelledby="home-product-title">
+  {% if product_image %}
+  <figure class="home-product-media">
+    <img
+      src="{{<devlab.url path={product_image} />}}"
+      alt="{{ product_image_alt }}"
+      width="480"
+      height="360"
+      decoding="async"
+    >
+  </figure>
+  {% endif %}
+  <div class="home-product-body">
+    <div class="home-product-copy">
+      <p class="hero-eyebrow">{{ product_eyebrow }}</p>
+      <div class="home-product-heading">
+        <h2 id="home-product-title">{{ product_title }}</h2>
+        {% if product_badge %}
+        <span class="home-product-badge">{{ product_badge }}</span>
+        {% endif %}
+      </div>
+      {% if product_description %}
+      <p>{{ product_description }}</p>
+      {% endif %}
+    </div>
+
+    {% if product_cta_path %}
+    <div class="hero-actions">
+      <a
+        class="button button-primary"
+        href="{{<devlab.route_url path={product_cta_path} content_lang={lang} />}}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {{ product_cta_label }}
+      </a>
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endif %}

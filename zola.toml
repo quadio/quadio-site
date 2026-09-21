@@ -20,7 +20,7 @@ logo_mark_path = "/brand/quad.svg"
 
 [extra.devlab.footer]
 show = true
-note = "Made in Atlanta, GA."
+note = "Made in USA"
 links_label = "Contact"
 links = [
   { name = "Email", path = "mailto:hello@quad.io", icon = "email" },

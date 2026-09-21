@@ -1,6 +1,6 @@
 +++
 title = "Clear inputs. Clear outputs."
-description = "We take difficult problems and ship systems with honest edges: what goes in, what comes out, and who holds the records. We build and monitor products that run without a screen."
+description = "We work on challenging problems and ship systems with honest edges: what goes in, what comes out, and who holds the records. We build and monitor products that run without a screen."
 
 [extra]
 home_layout = "wide"
@@ -12,7 +12,7 @@ home_primary_action_path = "mailto:hello@quad.io"
 home_secondary_action_label = "Approach"
 home_secondary_action_path = "#approach"
 home_features = [
-  { kicker = "Contract", title = "Honest edges", description = "Scope and Architecture Defined. Ship only what is necessary." },
+  { kicker = "Contract", title = "Honest edges", description = "Scope and architecture defined. Ship only what is necessary. Data sovereignty is the goal." },
   { kicker = "Interface", title = "Screenless", description = "Agents can configure and operate the system; human review when judgment is required. Headless is the goal." },
   { kicker = "Custody", title = "Sovereign data", description = "MIT-licensed software, local by default, in formats you can export. Custody is the design." },
 ]
@@ -28,7 +28,7 @@ cta_label = "Visit Burton"
 cta_path = "https://www.burtonapp.com"
 
 [extra.home_cta]
-title = "Start with the edges"
+title = "Get in touch"
 description = "hello@quad.io"
 primary_label = "Email Quad.io"
 primary_path = "mailto:hello@quad.io"

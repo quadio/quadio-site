@@ -17,7 +17,19 @@ home_features = [
   { kicker = "Custody", title = "Sovereign data", description = "MIT-licensed software, local by default, in formats you can export. Custody is the design." },
 ]
 
-[extra.home_product]
+[[extra.home_products]]
+id = "rgit"
+eyebrow = "Product"
+title = "rgit"
+badge = "MIT License"
+description = "Git with etiquette. A self-hosted forge: SSH remotes, merge requests, and in-repo workflows. Conventional Commits and SemVer by default. No website on the host."
+image = "/images/product/rgit.svg"
+image_alt = "Terminal session: rgit registers an admin key, then git pushes to ssh."
+cta_label = "Visit rgit"
+cta_path = "https://github.com/rconnelly/rgit"
+
+[[extra.home_products]]
+id = "burton"
 eyebrow = "Product"
 title = "Burton Workspaces"
 badge = "MIT License"

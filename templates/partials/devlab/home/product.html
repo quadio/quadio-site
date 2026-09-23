@@ -1,5 +1,35 @@
-{# Site overlay: Burton Workspaces product panel. #}
+{# Site overlay: product panels. Prefers extra.home_products (array), else extra.home_product. #}
 {% if has_home_product %}
+{% set products = none %}
+{% if section.extra.home_products is defined %}
+{% set products = section.extra.home_products %}
+{% elif config.extra.home_products is defined %}
+{% set products = config.extra.home_products %}
+{% endif %}
+
+{% if products %}
+{% for product in products %}
+{% set_global product_eyebrow = "Product" %}
+{% set_global product_title = "Product" %}
+{% set_global product_description = "" %}
+{% set_global product_badge = "" %}
+{% set_global product_cta_label = "Learn more" %}
+{% set_global product_cta_path = "" %}
+{% set_global product_image = "" %}
+{% set_global product_image_alt = "" %}
+{% set_global product_dom_id = "product-" ~ loop.index %}
+{% if product.eyebrow is defined %}{% set_global product_eyebrow = product.eyebrow %}{% endif %}
+{% if product.title is defined %}{% set_global product_title = product.title %}{% endif %}
+{% if product.description is defined %}{% set_global product_description = product.description %}{% endif %}
+{% if product.badge is defined %}{% set_global product_badge = product.badge %}{% endif %}
+{% if product.cta_label is defined %}{% set_global product_cta_label = product.cta_label %}{% endif %}
+{% if product.cta_path is defined %}{% set_global product_cta_path = product.cta_path %}{% endif %}
+{% if product.image is defined %}{% set_global product_image = product.image %}{% endif %}
+{% if product.image_alt is defined %}{% set_global product_image_alt = product.image_alt %}{% endif %}
+{% if product.id is defined %}{% set_global product_dom_id = "product-" ~ product.id %}{% endif %}
+{% include "partials/devlab/home/product-card.html" %}
+{% endfor %}
+{% else %}
 {% set home_product = none %}
 {% if section.extra.home_product is defined %}
 {% set home_product = section.extra.home_product %}
@@ -14,6 +44,7 @@
 {% set_global product_cta_path = "https://www.burtonapp.com" %}
 {% set_global product_image = "" %}
 {% set_global product_image_alt = "" %}
+{% set_global product_dom_id = "product" %}
 {% if home_product %}
 {% if home_product.eyebrow is defined %}{% set_global product_eyebrow = home_product.eyebrow %}{% endif %}
 {% if home_product.title is defined %}{% set_global product_title = home_product.title %}{% endif %}
@@ -23,46 +54,8 @@
 {% if home_product.cta_path is defined %}{% set_global product_cta_path = home_product.cta_path %}{% endif %}
 {% if home_product.image is defined %}{% set_global product_image = home_product.image %}{% endif %}
 {% if home_product.image_alt is defined %}{% set_global product_image_alt = home_product.image_alt %}{% endif %}
+{% if home_product.id is defined %}{% set_global product_dom_id = "product-" ~ home_product.id %}{% endif %}
 {% endif %}
-
-<section class="home-product{% if product_image %} home-product-with-media{% endif %}" id="product" aria-labelledby="home-product-title">
-  {% if product_image %}
-  <figure class="home-product-media">
-    <img
-      src="{{<devlab.url path={product_image} />}}"
-      alt="{{ product_image_alt }}"
-      width="480"
-      height="360"
-      decoding="async"
-    >
-  </figure>
-  {% endif %}
-  <div class="home-product-body">
-    <div class="home-product-copy">
-      <p class="hero-eyebrow">{{ product_eyebrow }}</p>
-      <div class="home-product-heading">
-        <h2 id="home-product-title">{{ product_title }}</h2>
-        {% if product_badge %}
-        <span class="home-product-badge">{{ product_badge }}</span>
-        {% endif %}
-      </div>
-      {% if product_description %}
-      <p>{{ product_description }}</p>
-      {% endif %}
-    </div>
-
-    {% if product_cta_path %}
-    <div class="hero-actions">
-      <a
-        class="button button-primary"
-        href="{{<devlab.route_url path={product_cta_path} content_lang={lang} />}}"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {{ product_cta_label }}
-      </a>
-    </div>
-    {% endif %}
-  </div>
-</section>
+{% include "partials/devlab/home/product-card.html" %}
+{% endif %}
 {% endif %}

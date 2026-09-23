@@ -52,7 +52,7 @@
 {% include "partials/devlab/home/features.html" %}
 
 {% set has_home_product = false %}
-{% if section.extra.home_product is defined or config.extra.home_product is defined %}
+{% if section.extra.home_products is defined or config.extra.home_products is defined or section.extra.home_product is defined or config.extra.home_product is defined %}
 {% set has_home_product = true %}
 {% endif %}
 {% set has_home_cta = false %}

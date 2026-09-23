@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="Rabun Git command line">
+  <defs>
+    <linearGradient id="rgit-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#c4a04a"/>
+      <stop offset="1" stop-color="#faf3d8"/>
+    </linearGradient>
+    <linearGradient id="rgit-water" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#efe4b8"/>
+      <stop offset="0.45" stop-color="#7a9e6e"/>
+      <stop offset="1" stop-color="#2f5c4a"/>
+    </linearGradient>
+    <clipPath id="rgit-mark">
+      <circle cx="96" cy="96" r="72"/>
+    </clipPath>
+  </defs>
+  <rect width="1280" height="720" fill="#0c241c"/>
+  <g clip-path="url(#rgit-mark)">
+    <rect x="24" y="24" width="144" height="80" fill="url(#rgit-sky)"/>
+    <rect x="24" y="104" width="144" height="64" fill="url(#rgit-water)"/>
+    <path fill="#143528" d="M36 112 72 58 96 88 120 54 156 112H36Z"/>
+    <path fill="#1f4a38" d="M64 112 84 86 96 100 112 80 132 112H64Z"/>
+    <ellipse cx="96" cy="108" rx="44" ry="7" fill="#fff8e0" opacity=".85"/>
+  </g>
+  <text x="196" y="92" fill="#c4a04a" font-family="ui-sans-serif, system-ui, sans-serif" font-size="28" letter-spacing="3">RABUN GIT</text>
+  <text x="196" y="138" fill="#faf3d8" font-family="ui-sans-serif, system-ui, sans-serif" font-size="40" font-weight="650">rgit on a host you own</text>
+  <rect x="64" y="200" width="1152" height="456" rx="16" fill="#143528"/>
+  <text x="96" y="268" fill="#7a9e6e" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28">$</text>
+  <text x="132" y="268" fill="#faf3d8" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28">rgit remote add origin git@HOST</text>
+  <text x="96" y="328" fill="#7a9e6e" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28">$</text>
+  <text x="132" y="328" fill="#faf3d8" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28">rgit origin key copy ada --admin</text>
+  <text x="96" y="388" fill="#7a9e6e" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28">$</text>
+  <text x="132" y="388" fill="#faf3d8" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28">git remote add origin ssh://git@HOST:2222/ada/website.git</text>
+  <text x="96" y="448" fill="#7a9e6e" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28">$</text>
+  <text x="132" y="448" fill="#faf3d8" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28">git push -u origin master</text>
+  <text x="96" y="528" fill="#c4a04a" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26">SSH remotes / merge requests / builder agents</text>
+</svg>

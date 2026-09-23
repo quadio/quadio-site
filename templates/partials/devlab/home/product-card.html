@@ -1,0 +1,40 @@
+<section class="home-product{% if product_image %} home-product-with-media{% endif %}" id="{{ product_dom_id }}" aria-labelledby="{{ product_dom_id }}-title">
+  {% if product_image %}
+  <figure class="home-product-media">
+    <img
+      src="{{<devlab.url path={product_image} />}}"
+      alt="{{ product_image_alt }}"
+      width="480"
+      height="360"
+      decoding="async"
+    >
+  </figure>
+  {% endif %}
+  <div class="home-product-body">
+    <div class="home-product-copy">
+      <p class="hero-eyebrow">{{ product_eyebrow }}</p>
+      <div class="home-product-heading">
+        <h2 id="{{ product_dom_id }}-title">{{ product_title }}</h2>
+        {% if product_badge %}
+        <span class="home-product-badge">{{ product_badge }}</span>
+        {% endif %}
+      </div>
+      {% if product_description %}
+      <p>{{ product_description }}</p>
+      {% endif %}
+    </div>
+
+    {% if product_cta_path %}
+    <div class="hero-actions">
+      <a
+        class="button button-primary"
+        href="{{<devlab.route_url path={product_cta_path} content_lang={lang} />}}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {{ product_cta_label }}
+      </a>
+    </div>
+    {% endif %}
+  </div>
+</section>

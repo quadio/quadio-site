@@ -12,7 +12,9 @@
   {% endif %}
   <div class="home-product-body">
     <div class="home-product-copy">
+      {% if product_eyebrow %}
       <p class="hero-eyebrow">{{ product_eyebrow }}</p>
+      {% endif %}
       <div class="home-product-heading">
         <h2 id="{{ product_dom_id }}-title">{{ product_title }}</h2>
         {% if product_badge %}

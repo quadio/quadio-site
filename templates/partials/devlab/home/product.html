@@ -9,7 +9,7 @@
 
 {% if products %}
 {% for product in products %}
-{% set_global product_eyebrow = "Product" %}
+{% set_global product_eyebrow = "" %}
 {% set_global product_title = "Product" %}
 {% set_global product_description = "" %}
 {% set_global product_badge = "" %}
@@ -36,7 +36,7 @@
 {% elif config.extra.home_product is defined %}
 {% set home_product = config.extra.home_product %}
 {% endif %}
-{% set_global product_eyebrow = "Product" %}
+{% set_global product_eyebrow = "" %}
 {% set_global product_title = "Burton Workspaces" %}
 {% set_global product_description = "" %}
 {% set_global product_badge = "MIT License" %}

@@ -19,25 +19,25 @@ home_features = [
 
 [[extra.home_products]]
 id = "rgit"
-eyebrow = "Product"
-title = "rgit"
+eyebrow = ""
+title = "Rgit"
 badge = "MIT License"
 description = "Git with etiquette. A self-hosted forge: SSH remotes, merge requests, and in-repo workflows. Conventional Commits and SemVer by default. No website on the host."
 image = "/images/product/rgit.svg"
-image_alt = "Terminal session: rgit registers an admin key, then git pushes to ssh."
-cta_label = "Visit rgit"
-cta_path = "https://github.com/rconnelly/rgit"
+image_alt = "Rabun mountain mark: gold sky, pine ridges, and still water."
+cta_label = "Visit Rgit"
+cta_path = "https://rgit.burtonapp.com/"
 
 [[extra.home_products]]
 id = "burton"
-eyebrow = "Product"
+eyebrow = ""
 title = "Burton Workspaces"
 badge = "MIT License"
 description = "Open-source business automation: wiki, messages, and knowledge that compound from people and agents. Self-host it or run it managed; the records stay yours."
 image = "/images/product/burton-lake.svg"
-image_alt = "Lake Burton ridges and pines reflected in still water."
-cta_label = "Visit Burton"
-cta_path = "https://www.burtonapp.com"
+image_alt = "Burton mountain mark: cool sky, lake ridges, and still water."
+cta_label = ""
+cta_path = ""
 
 [extra.home_cta]
 title = "Get in touch"

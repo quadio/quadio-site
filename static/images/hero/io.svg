@@ -1,53 +1,53 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="An input enters a bounded system and leaves as an inspectable result.">
   <rect width="1280" height="720" fill="#201A16"/>
   <g fill="none" stroke="#3D342C" stroke-width="1">
-    <path d="M80 120 H1200"/>
-    <path d="M80 600 H1200"/>
-    <path d="M160 80 V640"/>
-    <path d="M1120 80 V640"/>
+    <path d="M56 80 H1224"/>
+    <path d="M56 640 H1224"/>
+    <path d="M96 48 V672"/>
+    <path d="M1224 48 V672"/>
   </g>
 
-  <g font-family="Avenir Next, Century Gothic, Futura, Trebuchet MS, sans-serif" font-weight="700" letter-spacing="0.18em">
-    <text x="220" y="168" fill="#9C9999" font-size="18">INPUT</text>
-    <text x="980" y="168" fill="#9C9999" font-size="18" text-anchor="end">OUTPUT</text>
+  <g font-family="Avenir Next, Century Gothic, Futura, Trebuchet MS, sans-serif" font-weight="700" letter-spacing="0.12em">
+    <text x="168" y="148" fill="#C8C8C8" font-size="40">INPUT</text>
+    <text x="1112" y="148" fill="#C8C8C8" font-size="40" text-anchor="end">OUTPUT</text>
   </g>
 
   <!-- Input stack: four named cells -->
   <g>
-    <rect x="180" y="220" width="160" height="56" rx="6" fill="#2C241E" stroke="#005CC7" stroke-width="2"/>
-    <rect x="180" y="292" width="160" height="56" rx="6" fill="#2C241E" stroke="#3D342C" stroke-width="2"/>
-    <rect x="180" y="364" width="160" height="56" rx="6" fill="#2C241E" stroke="#3D342C" stroke-width="2"/>
-    <rect x="180" y="436" width="160" height="56" rx="6" fill="#2C241E" stroke="#3D342C" stroke-width="2"/>
-    <g fill="#F7F6F4" font-family="Avenir Next, Century Gothic, Futura, Trebuchet MS, sans-serif" font-size="16">
-      <text x="200" y="254">signal</text>
-      <text x="200" y="326">event</text>
-      <text x="200" y="398">record</text>
-      <text x="200" y="470">state</text>
+    <rect x="168" y="196" width="228" height="88" rx="8" fill="#2C241E" stroke="#005CC7" stroke-width="3"/>
+    <rect x="168" y="300" width="228" height="88" rx="8" fill="#2C241E" stroke="#3D342C" stroke-width="3"/>
+    <rect x="168" y="404" width="228" height="88" rx="8" fill="#2C241E" stroke="#3D342C" stroke-width="3"/>
+    <rect x="168" y="508" width="228" height="88" rx="8" fill="#2C241E" stroke="#3D342C" stroke-width="3"/>
+    <g fill="#F7F6F4" font-family="Avenir Next, Century Gothic, Futura, Trebuchet MS, sans-serif" font-size="36" font-weight="700">
+      <text x="196" y="254">signal</text>
+      <text x="196" y="358">event</text>
+      <text x="196" y="462">record</text>
+      <text x="196" y="566">state</text>
     </g>
   </g>
 
   <!-- Channel in -->
-  <path d="M356 248 H470" stroke="#005CC7" stroke-width="3"/>
-  <path d="M356 320 H430" stroke="#3D342C" stroke-width="2"/>
-  <path d="M356 392 H430" stroke="#3D342C" stroke-width="2"/>
-  <path d="M356 464 H430" stroke="#3D342C" stroke-width="2"/>
+  <path d="M396 240 H512" stroke="#005CC7" stroke-width="4"/>
+  <path d="M396 344 H468" stroke="#3D342C" stroke-width="3"/>
+  <path d="M396 448 H468" stroke="#3D342C" stroke-width="3"/>
+  <path d="M396 552 H468" stroke="#3D342C" stroke-width="3"/>
 
   <!-- Bounded system: four equal squares -->
-  <g transform="translate(470 184)">
-    <rect width="340" height="340" rx="40" fill="#2C241E" stroke="#3D342C" stroke-width="2"/>
-    <rect x="42" y="42" width="107" height="107" rx="10" fill="#005CC7"/>
-    <rect x="191" y="42" width="107" height="107" rx="10" fill="#005CC7"/>
-    <rect x="42" y="191" width="107" height="107" rx="10" fill="#005CC7"/>
-    <rect x="191" y="191" width="107" height="107" rx="10" fill="#4AA0E8"/>
+  <g transform="translate(512 176)">
+    <rect width="368" height="368" rx="44" fill="#2C241E" stroke="#3D342C" stroke-width="3"/>
+    <rect x="44" y="44" width="116" height="116" rx="12" fill="#005CC7"/>
+    <rect x="208" y="44" width="116" height="116" rx="12" fill="#005CC7"/>
+    <rect x="44" y="208" width="116" height="116" rx="12" fill="#005CC7"/>
+    <rect x="208" y="208" width="116" height="116" rx="12" fill="#4AA0E8"/>
   </g>
 
   <!-- Channel out -->
-  <path d="M810 392 H924" stroke="#C8C8C8" stroke-width="3"/>
+  <path d="M880 360 H992" stroke="#C8C8C8" stroke-width="4"/>
 
   <!-- Output -->
   <g>
-    <rect x="924" y="328" width="176" height="128" rx="10" fill="#005CC7"/>
-    <text x="1012" y="390" text-anchor="middle" fill="#FFFFFF" font-family="Avenir Next, Century Gothic, Futura, Trebuchet MS, sans-serif" font-size="22" font-weight="700">result</text>
-    <text x="1012" y="420" text-anchor="middle" fill="#D6E7FA" font-family="Avenir Next, Century Gothic, Futura, Trebuchet MS, sans-serif" font-size="14">inspectable</text>
+    <rect x="992" y="262" width="232" height="196" rx="12" fill="#005CC7"/>
+    <text x="1108" y="348" text-anchor="middle" fill="#FFFFFF" font-family="Avenir Next, Century Gothic, Futura, Trebuchet MS, sans-serif" font-size="48" font-weight="700">result</text>
+    <text x="1108" y="396" text-anchor="middle" fill="#D6E7FA" font-family="Avenir Next, Century Gothic, Futura, Trebuchet MS, sans-serif" font-size="32" font-weight="600">inspectable</text>
   </g>
 </svg>

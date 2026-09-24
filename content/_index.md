@@ -26,7 +26,7 @@ description = "Git with etiquette. A self-hosted forge: SSH remotes, merge reque
 image = "/images/product/rgit.svg"
 image_alt = "Rabun mountain mark: gold sky, pine ridges, and still water."
 cta_label = "Visit Rgit"
-cta_path = "https://rgit.burtonapp.com/"
+cta_path = "https://rgit.rs/"
 
 [[extra.home_products]]
 id = "burton"

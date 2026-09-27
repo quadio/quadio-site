@@ -30,12 +30,15 @@ cta_path = "https://rgit.rs/"
 
 [[extra.home_products]]
 id = "burton"
-eyebrow = ""
+eyebrow = "Mk1"
 title = "Burton Workspaces"
 badge = "MIT License"
 description = "Open-source business automation: wiki, messages, and knowledge that compound from people and agents. Run local models on-prem. We provide managed services and developer time. Your data never leaves your enclave."
 image = "/images/product/burton-lake.svg"
 image_alt = "Burton mountain mark: cool sky, lake ridges, and still water."
+aside_image = "/images/product/burton-mk1.png"
+aside_image_alt = "Burton Mk1 compact enclave chassis."
+aside_caption = "mk1"
 cta_label = "Contact Us"
 cta_path = "mailto:hello@quad.io"
 

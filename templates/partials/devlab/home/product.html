@@ -17,6 +17,9 @@
 {% set_global product_cta_path = "" %}
 {% set_global product_image = "" %}
 {% set_global product_image_alt = "" %}
+{% set_global product_aside_image = "" %}
+{% set_global product_aside_image_alt = "" %}
+{% set_global product_aside_caption = "" %}
 {% set_global product_dom_id = "product-" ~ loop.index %}
 {% if product.eyebrow is defined %}{% set_global product_eyebrow = product.eyebrow %}{% endif %}
 {% if product.title is defined %}{% set_global product_title = product.title %}{% endif %}
@@ -26,6 +29,9 @@
 {% if product.cta_path is defined %}{% set_global product_cta_path = product.cta_path %}{% endif %}
 {% if product.image is defined %}{% set_global product_image = product.image %}{% endif %}
 {% if product.image_alt is defined %}{% set_global product_image_alt = product.image_alt %}{% endif %}
+{% if product.aside_image is defined %}{% set_global product_aside_image = product.aside_image %}{% endif %}
+{% if product.aside_image_alt is defined %}{% set_global product_aside_image_alt = product.aside_image_alt %}{% endif %}
+{% if product.aside_caption is defined %}{% set_global product_aside_caption = product.aside_caption %}{% endif %}
 {% if product.id is defined %}{% set_global product_dom_id = "product-" ~ product.id %}{% endif %}
 {% include "partials/devlab/home/product-card.html" %}
 {% endfor %}
@@ -44,6 +50,9 @@
 {% set_global product_cta_path = "https://burton.work" %}
 {% set_global product_image = "" %}
 {% set_global product_image_alt = "" %}
+{% set_global product_aside_image = "" %}
+{% set_global product_aside_image_alt = "" %}
+{% set_global product_aside_caption = "" %}
 {% set_global product_dom_id = "product" %}
 {% if home_product %}
 {% if home_product.eyebrow is defined %}{% set_global product_eyebrow = home_product.eyebrow %}{% endif %}
@@ -54,6 +63,9 @@
 {% if home_product.cta_path is defined %}{% set_global product_cta_path = home_product.cta_path %}{% endif %}
 {% if home_product.image is defined %}{% set_global product_image = home_product.image %}{% endif %}
 {% if home_product.image_alt is defined %}{% set_global product_image_alt = home_product.image_alt %}{% endif %}
+{% if home_product.aside_image is defined %}{% set_global product_aside_image = home_product.aside_image %}{% endif %}
+{% if home_product.aside_image_alt is defined %}{% set_global product_aside_image_alt = home_product.aside_image_alt %}{% endif %}
+{% if home_product.aside_caption is defined %}{% set_global product_aside_caption = home_product.aside_caption %}{% endif %}
 {% if home_product.id is defined %}{% set_global product_dom_id = "product-" ~ home_product.id %}{% endif %}
 {% endif %}
 {% include "partials/devlab/home/product-card.html" %}

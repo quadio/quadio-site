@@ -1,4 +1,4 @@
-<section class="home-product{% if product_image %} home-product-with-media{% endif %}" id="{{ product_dom_id }}" aria-labelledby="{{ product_dom_id }}-title">
+<section class="home-product{% if product_image %} home-product-with-media{% endif %}{% if product_aside_image %} home-product-with-aside{% endif %}" id="{{ product_dom_id }}" aria-labelledby="{{ product_dom_id }}-title">
   {% if product_image %}
   <figure class="home-product-media">
     <img
@@ -38,4 +38,18 @@
     </div>
     {% endif %}
   </div>
+  {% if product_aside_image %}
+  <figure class="home-product-media home-product-aside">
+    <img
+      src="{{<devlab.url path={product_aside_image} />}}"
+      alt="{{ product_aside_image_alt }}"
+      width="480"
+      height="360"
+      decoding="async"
+    >
+    {% if product_aside_caption %}
+    <figcaption class="home-product-aside-caption">{{ product_aside_caption }}</figcaption>
+    {% endif %}
+  </figure>
+  {% endif %}
 </section>

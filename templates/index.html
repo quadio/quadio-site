@@ -55,14 +55,24 @@
 {% if section.extra.home_products is defined or config.extra.home_products is defined or section.extra.home_product is defined or config.extra.home_product is defined %}
 {% set has_home_product = true %}
 {% endif %}
+{% set has_home_learn = false %}
+{% if section.extra.home_learn is defined or config.extra.home_learn is defined %}
+{% set has_home_learn = true %}
+{% endif %}
+{% set has_home_hiring = false %}
+{% if section.extra.home_hiring is defined or config.extra.home_hiring is defined %}
+{% set has_home_hiring = true %}
+{% endif %}
 {% set has_home_cta = false %}
 {% if section.extra.home_cta is defined or config.extra.home_cta is defined %}
 {% set has_home_cta = true %}
 {% endif %}
 
-{% if has_home_product or has_home_cta %}
+{% if has_home_product or has_home_learn or has_home_hiring or has_home_cta %}
 <div class="home-learn" id="home-learn-more">
   {% include "partials/devlab/home/product.html" %}
+  {% include "partials/devlab/home/learn.html" %}
+  {% include "partials/devlab/home/hiring.html" %}
   {% include "partials/devlab/home/cta.html" %}
 </div>
 {% endif %}

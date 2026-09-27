@@ -39,6 +39,25 @@ image_alt = "Burton mountain mark: cool sky, lake ridges, and still water."
 cta_label = ""
 cta_path = ""
 
+[extra.home_learn]
+eyebrow = "Company"
+title = "About Quad.io"
+description = "We are a product engineering company. We build systems you can inspect, run without a screen, and keep in your own custody."
+cards = [
+  { kicker = "Work", title = "Product engineering", description = "Contract work and products with defined edges: what goes in, what comes out, and who holds the records." },
+  { kicker = "Products", title = "Rgit and Burton", description = "A self-hosted git forge and open-source business automation. MIT-licensed, local by default." },
+  { kicker = "Custody", title = "Your records", description = "Software in formats you can export. Agents can operate it; humans review when judgment is required." },
+  { kicker = "Place", title = "Made in USA", description = "Quad.io is based in the United States. Company pages cover who we are, hiring, and privacy." },
+]
+
+[extra.home_hiring]
+title = "We are hiring"
+description = "careers@quad.io"
+primary_label = "Email Careers"
+primary_path = "mailto:careers@quad.io"
+secondary_label = ""
+secondary_path = ""
+
 [extra.home_cta]
 title = "Get in touch"
 description = "hello@quad.io"

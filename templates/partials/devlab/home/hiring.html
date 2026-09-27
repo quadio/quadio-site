@@ -1,0 +1,58 @@
+{# Site overlay: hiring row above the contact CTA. #}
+{% if has_home_hiring %}
+  {% set home_hiring_primary_label = "Email Careers" %}
+  {% set home_hiring_primary_path = "" %}
+  {% if config.extra.home_hiring is defined and config.extra.home_hiring.primary_label is defined %}
+  {% set home_hiring_primary_label = config.extra.home_hiring.primary_label %}
+  {% endif %}
+  {% if config.extra.home_hiring is defined and config.extra.home_hiring.primary_path is defined %}
+  {% set home_hiring_primary_path = config.extra.home_hiring.primary_path %}
+  {% endif %}
+  {% if section.extra.home_hiring is defined and section.extra.home_hiring.primary_label is defined %}
+  {% set home_hiring_primary_label = section.extra.home_hiring.primary_label %}
+  {% endif %}
+  {% if section.extra.home_hiring is defined and section.extra.home_hiring.primary_path is defined %}
+  {% set home_hiring_primary_path = section.extra.home_hiring.primary_path %}
+  {% endif %}
+  {% set home_hiring_secondary_label = "" %}
+  {% set home_hiring_secondary_path = "" %}
+  {% if config.extra.home_hiring is defined and config.extra.home_hiring.secondary_label is defined %}
+  {% set home_hiring_secondary_label = config.extra.home_hiring.secondary_label %}
+  {% endif %}
+  {% if config.extra.home_hiring is defined and config.extra.home_hiring.secondary_path is defined %}
+  {% set home_hiring_secondary_path = config.extra.home_hiring.secondary_path %}
+  {% endif %}
+  {% if section.extra.home_hiring is defined and section.extra.home_hiring.secondary_label is defined %}
+  {% set home_hiring_secondary_label = section.extra.home_hiring.secondary_label %}
+  {% endif %}
+  {% if section.extra.home_hiring is defined and section.extra.home_hiring.secondary_path is defined %}
+  {% set home_hiring_secondary_path = section.extra.home_hiring.secondary_path %}
+  {% endif %}
+
+<section class="home-learn-cta{% if home_hiring_primary_path or home_hiring_secondary_path %} home-learn-cta-with-actions{% endif %}" aria-labelledby="home-hiring-title">
+  <div class="home-learn-cta-copy">
+    <h2 id="home-hiring-title">
+      {% if section.extra.home_hiring is defined and section.extra.home_hiring.title is defined %}{{ section.extra.home_hiring.title }}{% elif config.extra.home_hiring is defined and config.extra.home_hiring.title is defined %}{{ config.extra.home_hiring.title }}{% else %}We are hiring{% endif %}
+    </h2>
+    <p>
+      {% if section.extra.home_hiring is defined and section.extra.home_hiring.description is defined %}{{ section.extra.home_hiring.description }}{% elif config.extra.home_hiring is defined and config.extra.home_hiring.description is defined %}{{ config.extra.home_hiring.description }}{% else %}careers@quad.io{% endif %}
+    </p>
+  </div>
+
+  {% if home_hiring_primary_path or home_hiring_secondary_path %}
+  <div class="hero-actions">
+    {% if home_hiring_primary_path %}
+    <a class="button button-primary" href="{{<devlab.route_url path={home_hiring_primary_path} content_lang={lang} />}}">
+      {{ home_hiring_primary_label }}
+    </a>
+    {% endif %}
+
+    {% if home_hiring_secondary_path %}
+    <a class="button button-secondary" href="{{<devlab.route_url path={home_hiring_secondary_path} content_lang={lang} />}}">
+      {{ home_hiring_secondary_label }}
+    </a>
+    {% endif %}
+  </div>
+  {% endif %}
+</section>
+{% endif %}

@@ -21,8 +21,11 @@ logo_mark_path = "/brand/quad.svg"
 [extra.devlab.footer]
 show = true
 note = "Made in USA"
-links_label = "Contact"
+links_label = "Company"
 links = [
+  { name = "About", path = "/about/" },
+  { name = "Careers", path = "/careers/" },
+  { name = "Privacy", path = "/privacy/" },
   { name = "Email", path = "mailto:hello@quad.io", icon = "email" },
 ]
 
@@ -30,6 +33,7 @@ links = [
 links = [
   { name = "Home", path = "/" },
   { name = "Approach", path = "#approach" },
+  { name = "About", path = "/about/" },
   { name = "Contact", path = "mailto:hello@quad.io" },
 ]
 

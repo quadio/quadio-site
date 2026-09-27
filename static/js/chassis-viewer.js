@@ -180,32 +180,24 @@ function attachViewer(dialog) {
       renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
       renderer.outputColorSpace = THREE.SRGBColorSpace;
       renderer.toneMapping = THREE.ACESFilmicToneMapping;
-      renderer.toneMappingExposure = 1.16;
+      renderer.toneMappingExposure = 1.28;
       renderer.__scene = scene;
       stage.replaceChildren(renderer.domElement);
       renderer.domElement.setAttribute("aria-label", "3D view of the Burton Mk1 chassis. Drag to rotate.");
 
-      scene.add(new THREE.AmbientLight(0xcfd5dc, 0.42));
-      scene.add(new THREE.HemisphereLight(0xe4e8ee, 0x2a2e33, 0.85));
-      const key = new THREE.DirectionalLight(0xf0f3f6, 1.7);
+      scene.add(new THREE.AmbientLight(0xcfd5dc, 0.68));
+      scene.add(new THREE.HemisphereLight(0xeef1f4, 0x5a6168, 1.15));
+      const key = new THREE.DirectionalLight(0xf4f6f8, 2.15);
       key.position.set(1.4, 3.6, 4.4);
       scene.add(key);
-      const rim = new THREE.DirectionalLight(0x4aa0e8, 0.22);
+      const rim = new THREE.DirectionalLight(0x4aa0e8, 0.32);
       rim.position.set(-3, 1.1, -1.2);
       scene.add(rim);
-      const fill = new THREE.DirectionalLight(0xc5ccd3, 0.55);
+      const fill = new THREE.DirectionalLight(0xd0d6dc, 0.9);
       fill.position.set(-2.2, 1.6, 2.4);
       scene.add(fill);
 
       scene.add(buildChassis(THREE, RoundedBoxGeometry));
-
-      const floor = new THREE.Mesh(
-        new THREE.CircleGeometry(4.2, 48),
-        new THREE.MeshStandardMaterial({ color: 0x16181b, metalness: 0.08, roughness: 1 })
-      );
-      floor.rotation.x = -Math.PI / 2;
-      floor.position.y = -0.78;
-      scene.add(floor);
 
       controls = new OrbitControls(camera, renderer.domElement);
       controls.enableDamping = true;

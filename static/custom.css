@@ -76,7 +76,7 @@ html[data-brand="quad"] .home-first-screen {
   display: flex;
   flex-direction: column;
   min-height: calc(100svh - var(--header-height));
-  padding-bottom: 0.5rem;
+  padding-bottom: 0;
 }
 
 html[data-brand="quad"] .site-main-home-wide,
@@ -97,7 +97,7 @@ html[data-brand="quad"] .hero-wide.hero-with-photo {
   padding:
     clamp(1.15rem, 2vw, 1.75rem)
     0
-    2.5rem;
+    1.35rem;
 
   border-radius: 0;
   background: transparent;
@@ -204,7 +204,7 @@ html[data-brand="quad"] .hero-wide.hero-with-photo .button-secondary:hover {
   }
 
   html[data-brand="quad"] .hero-wide.hero-with-photo {
-    padding: var(--space-6) 0 2.25rem;
+    padding: var(--space-6) 0 1.5rem;
   }
 
   html[data-brand="quad"] .hero-photo img {
@@ -274,7 +274,7 @@ html[data-brand="quad"] .home-product {
   align-items: start;
 
   width: min(100% - var(--wide-gutter), var(--wide-width));
-  margin: 0 auto var(--space-8);
+  margin: 0 auto var(--space-6);
   padding: clamp(0.85rem, 2.4vw, var(--space-10));
 
   background: rgba(32, 26, 22, 0.56);
@@ -546,12 +546,12 @@ html[data-brand="quad"] [id^="product-"] {
 
 html[data-brand="quad"] .home-page-wide .hero-wide + .feature-grid {
   z-index: 1;
-  margin-top: -4.5rem;
+  margin-top: -6.75rem;
 }
 
 html[data-brand="quad"] .home-learn {
   margin-top: 0;
-  padding-top: 1.5rem;
+  padding-top: 0.5rem;
 }
 
 html[data-brand="quad"] .home-learn-overview {

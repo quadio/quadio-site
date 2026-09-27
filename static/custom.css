@@ -234,15 +234,14 @@ html[data-brand="quad"] .home-learn-overview-with-cards .home-learn-overview-inn
 html[data-brand="quad"] .home-learn-intro {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: var(--space-8);
   min-width: 0;
 }
 
 html[data-brand="quad"] .home-hiring {
   display: block;
-  width: auto;
-  margin: 0;
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
   padding: 0;
 
   background: transparent;
@@ -255,7 +254,7 @@ html[data-brand="quad"] .home-hiring-with-actions {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: var(--space-4) var(--space-5);
 }
 
@@ -277,10 +276,12 @@ html[data-brand="quad"] .home-hiring p {
 
 html[data-brand="quad"] .home-hiring .hero-actions {
   margin-top: 0;
+  margin-inline-start: auto;
 }
 
 @media (max-width: 900px) {
-  html[data-brand="quad"] .home-learn-intro {
-    gap: var(--space-6);
+  html[data-brand="quad"] .home-hiring {
+    margin-top: var(--space-6);
+    margin-bottom: 0;
   }
 }

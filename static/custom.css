@@ -61,6 +61,10 @@ html[data-brand="quad"] {
     "Trebuchet MS",
     system-ui,
     sans-serif;
+  --product-logo-col: clamp(4.5rem, 12vw, 9.25rem);
+  --product-chassis-col: clamp(6rem, 20vw, 13rem);
+  --product-row-gap: clamp(0.75rem, 2.5vw, var(--space-8));
+  --product-pad-inline: clamp(0.85rem, 2.4vw, var(--space-10));
 }
 
 html[data-brand="quad"] .button {
@@ -197,21 +201,6 @@ html[data-brand="quad"] .hero-wide.hero-with-photo .button-secondary:hover {
   color: #4aa0e8;
 }
 
-@media (max-width: 760px) {
-  html[data-brand="quad"] .hero-wide:not(.hero-with-photo) {
-    padding: var(--space-6);
-    padding-bottom: calc(var(--space-6) + var(--space-10));
-  }
-
-  html[data-brand="quad"] .hero-wide.hero-with-photo {
-    padding: var(--space-6) 0 1.5rem;
-  }
-
-  html[data-brand="quad"] .hero-photo img {
-    transform: scale(1.18);
-  }
-}
-
 html[data-brand="quad"] .hero-with-media .hero-title {
   max-width: 14ch;
 }
@@ -270,12 +259,12 @@ html[data-brand="quad"] .home-page .feature-card-description {
 html[data-brand="quad"] .home-product {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
-  gap: clamp(0.75rem, 2.5vw, var(--space-8));
+  gap: var(--product-row-gap);
   align-items: start;
 
   width: min(100% - var(--wide-gutter), var(--wide-width));
   margin: 0 auto var(--space-6);
-  padding: clamp(0.85rem, 2.4vw, var(--space-10));
+  padding: var(--product-pad-inline);
 
   background: rgba(32, 26, 22, 0.56);
   box-shadow: inset 0 0 0 1px rgba(247, 246, 244, 0.18);
@@ -284,15 +273,15 @@ html[data-brand="quad"] .home-product {
 }
 
 html[data-brand="quad"] .home-product-with-media {
-  grid-template-columns: clamp(4.5rem, 12vw, 9.25rem) minmax(0, 1fr);
+  grid-template-columns: var(--product-logo-col) minmax(0, 1fr);
   align-items: start;
 }
 
 html[data-brand="quad"] .home-product-with-media.home-product-with-aside {
   grid-template-columns:
-    clamp(4.5rem, 12vw, 9.25rem)
+    var(--product-logo-col)
     minmax(0, 1fr)
-    clamp(6rem, 20vw, 13rem);
+    var(--product-chassis-col);
 }
 
 html[data-brand="quad"] .home-product-body {
@@ -529,10 +518,6 @@ html[data-brand="quad"] .home-product-aside {
 }
 
 @media (max-width: 700px) {
-  html[data-brand="quad"] .home-product {
-    padding: 0.8rem 0.85rem;
-  }
-
   html[data-brand="quad"] .home-product p {
     font-size: 0.85rem;
   }
@@ -544,9 +529,11 @@ html[data-brand="quad"] [id^="product-"] {
   scroll-margin-top: calc(var(--header-height) + var(--space-6));
 }
 
-html[data-brand="quad"] .home-page-wide .hero-wide + .feature-grid {
-  z-index: 1;
-  margin-top: -6.75rem;
+@media (min-width: 761px) {
+  html[data-brand="quad"] .home-page-wide .hero-wide + .feature-grid {
+    z-index: 1;
+    margin-top: -6.75rem;
+  }
 }
 
 html[data-brand="quad"] .home-learn {
@@ -620,5 +607,70 @@ html[data-brand="quad"] .home-hiring .hero-actions {
   html[data-brand="quad"] .home-hiring {
     margin-top: var(--space-6);
     margin-bottom: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  html[data-brand="quad"] {
+    --product-logo-col: 3.5rem;
+    --product-row-gap: 0.75rem;
+    --product-pad-inline: 0.85rem;
+  }
+
+  html[data-brand="quad"] .home-first-screen {
+    min-height: 0;
+    padding-bottom: 0;
+  }
+
+  html[data-brand="quad"] .hero-wide.hero-with-photo {
+    padding: var(--space-6) 0;
+  }
+
+  html[data-brand="quad"] .hero-wide.hero-with-photo .hero-copy,
+  html[data-brand="quad"] .home-page-wide .feature-grid,
+  html[data-brand="quad"] .home-product,
+  html[data-brand="quad"] .home-page-wide .home-learn-overview-inner,
+  html[data-brand="quad"] .home-page-wide .home-learn-cta {
+    width: min(100% - var(--layout-gutter), var(--wide-width));
+    margin-inline: auto;
+  }
+
+  html[data-brand="quad"] .home-page-wide .hero-wide + .feature-grid {
+    margin-top: var(--space-6);
+  }
+
+  html[data-brand="quad"] .home-product,
+  html[data-brand="quad"] .home-product-with-media,
+  html[data-brand="quad"] .home-product-with-media.home-product-with-aside {
+    grid-template-columns: var(--product-logo-col) minmax(0, 1fr);
+  }
+
+  html[data-brand="quad"] .home-product-aside {
+    grid-column: 2;
+    width: min(100%, 8.5rem);
+    justify-self: start;
+  }
+
+  html[data-brand="quad"] .home-learn {
+    padding-top: var(--space-6);
+  }
+
+  html[data-brand="quad"] .home-learn-intro {
+    padding-inline-start: calc(
+      var(--product-pad-inline) + var(--product-logo-col) + var(--product-row-gap)
+    );
+  }
+
+  html[data-brand="quad"] .hero-photo img {
+    transform: scale(1.18);
+  }
+
+  html[data-brand="quad"] .home-hiring-with-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  html[data-brand="quad"] .home-hiring .hero-actions {
+    margin-inline-start: 0;
   }
 }

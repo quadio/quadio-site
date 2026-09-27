@@ -18,17 +18,6 @@ home_features = [
 ]
 
 [[extra.home_products]]
-id = "rgit"
-eyebrow = ""
-title = "Rgit"
-badge = "MIT License"
-description = "Git with etiquette. A self-hosted forge: SSH remotes, merge requests, and in-repo workflows. Conventional Commits and SemVer by default. No website on the host."
-image = "/images/product/rgit.svg"
-image_alt = "Rabun mountain mark: gold sky, pine ridges, and still water."
-cta_label = "Visit Rgit"
-cta_path = "https://rgit.rs/"
-
-[[extra.home_products]]
 id = "burton"
 eyebrow = "Mk1"
 title = "Burton Workspaces"
@@ -41,6 +30,17 @@ aside_image_alt = "Burton Mk1 compact enclave chassis."
 aside_caption = "mk1"
 cta_label = "Contact Us"
 cta_path = "mailto:hello@quad.io"
+
+[[extra.home_products]]
+id = "rgit"
+eyebrow = ""
+title = "Rgit"
+badge = "MIT License"
+description = "Git with etiquette. A self-hosted forge: SSH remotes, merge requests, and in-repo workflows. Conventional Commits and SemVer by default. No website on the host."
+image = "/images/product/rgit.svg"
+image_alt = "Rabun mountain mark: gold sky, pine ridges, and still water."
+cta_label = "Visit Rgit"
+cta_path = "https://rgit.rs/"
 
 [extra.home_learn]
 eyebrow = "Company"

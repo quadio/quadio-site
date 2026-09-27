@@ -29,8 +29,8 @@
   {% set home_hiring_secondary_path = section.extra.home_hiring.secondary_path %}
   {% endif %}
 
-<section class="home-learn-cta{% if home_hiring_primary_path or home_hiring_secondary_path %} home-learn-cta-with-actions{% endif %}" aria-labelledby="home-hiring-title">
-  <div class="home-learn-cta-copy">
+<section class="home-hiring{% if home_hiring_primary_path or home_hiring_secondary_path %} home-hiring-with-actions{% endif %}" aria-labelledby="home-hiring-title">
+  <div class="home-hiring-copy">
     <h2 id="home-hiring-title">
       {% if section.extra.home_hiring is defined and section.extra.home_hiring.title is defined %}{{ section.extra.home_hiring.title }}{% elif config.extra.home_hiring is defined and config.extra.home_hiring.title is defined %}{{ config.extra.home_hiring.title }}{% else %}We are hiring{% endif %}
     </h2>
@@ -42,7 +42,7 @@
   {% if home_hiring_primary_path or home_hiring_secondary_path %}
   <div class="hero-actions">
     {% if home_hiring_primary_path %}
-    <a class="button button-primary" href="{{<devlab.route_url path={home_hiring_primary_path} content_lang={lang} />}}">
+    <a class="button button-secondary" href="{{<devlab.route_url path={home_hiring_primary_path} content_lang={lang} />}}">
       {{ home_hiring_primary_label }}
     </a>
     {% endif %}

@@ -47,7 +47,7 @@ cards = [
   { kicker = "Work", title = "Product engineering", description = "Contract work and products with defined edges: what goes in, what comes out, and who holds the records." },
   { kicker = "Products", title = "Rgit and Burton", description = "A self-hosted git forge and open-source business automation. MIT-licensed, local by default." },
   { kicker = "Custody", title = "Your records", description = "Software in formats you can export. Agents can operate it; humans review when judgment is required." },
-  { kicker = "Place", title = "Made in USA", description = "Quad.io is based in the United States. Company pages cover who we are, hiring, and privacy." },
+  { kicker = "Place", title = "Made in USA", description = "We are made in USA. Quad.io has offices in Georgia and Florida." },
 ]
 
 [extra.home_hiring]

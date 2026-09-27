@@ -217,6 +217,60 @@ html[data-brand="quad"] .home-learn-overview {
   margin-bottom: clamp(var(--space-12), 5vw, var(--space-16));
 }
 
-html[data-brand="quad"] .home-learn > .home-learn-cta:not(:last-child) {
-  margin-bottom: var(--space-8);
+html[data-brand="quad"] .home-learn-overview-with-cards .home-learn-overview-inner {
+  align-items: stretch;
+}
+
+html[data-brand="quad"] .home-learn-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-8);
+  min-width: 0;
+}
+
+html[data-brand="quad"] .home-hiring {
+  display: block;
+  width: auto;
+  margin: 0;
+  padding: 0;
+
+  background: transparent;
+  box-shadow: none;
+
+  text-align: start;
+}
+
+html[data-brand="quad"] .home-hiring-with-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--space-4) var(--space-5);
+}
+
+html[data-brand="quad"] .home-hiring-copy {
+  max-width: 42rem;
+}
+
+html[data-brand="quad"] .home-hiring h2 {
+  margin: 0 0 var(--space-2);
+  font-size: clamp(var(--text-xl), 2vw, var(--text-2xl));
+  line-height: var(--leading-snug);
+}
+
+html[data-brand="quad"] .home-hiring p {
+  margin: 0;
+  color: var(--color-muted);
+  line-height: var(--leading-body);
+}
+
+html[data-brand="quad"] .home-hiring .hero-actions {
+  margin-top: 0;
+}
+
+@media (max-width: 900px) {
+  html[data-brand="quad"] .home-learn-intro {
+    gap: var(--space-6);
+  }
 }

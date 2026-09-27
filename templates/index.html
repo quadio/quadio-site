@@ -72,7 +72,9 @@
 <div class="home-learn" id="home-learn-more">
   {% include "partials/devlab/home/product.html" %}
   {% include "partials/devlab/home/learn.html" %}
+  {% if not has_home_learn %}
   {% include "partials/devlab/home/hiring.html" %}
+  {% endif %}
   {% include "partials/devlab/home/cta.html" %}
 </div>
 {% endif %}

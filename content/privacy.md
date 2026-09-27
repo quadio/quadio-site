@@ -61,6 +61,7 @@ We may update this policy. The current version is always posted on this page. Ma
 ## Contact
 
 Quad.io  
-United States
+United States  
+Offices in Georgia and Florida
 
 [hello@quad.io](mailto:hello@quad.io)

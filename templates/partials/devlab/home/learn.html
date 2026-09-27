@@ -10,16 +10,20 @@
 {% set has_home_learn_cards = home_learn_cards | length > 0 %}
 <section class="home-learn-overview{% if has_home_learn_cards %} home-learn-overview-with-cards{% endif %}" id="about" aria-labelledby="home-learn-title">
   <div class="home-learn-overview-inner">
-    <div class="home-learn-header">
-      <p class="hero-eyebrow">
-        {% if section.extra.home_learn is defined and section.extra.home_learn.eyebrow is defined %}{{ section.extra.home_learn.eyebrow }}{% elif config.extra.home_learn is defined and config.extra.home_learn.eyebrow is defined %}{{ config.extra.home_learn.eyebrow }}{% else %}Company{% endif %}
-      </p>
-      <h2 id="home-learn-title">
-        {% if section.extra.home_learn is defined and section.extra.home_learn.title is defined %}{{ section.extra.home_learn.title }}{% elif config.extra.home_learn is defined and config.extra.home_learn.title is defined %}{{ config.extra.home_learn.title }}{% else %}About Quad.io{% endif %}
-      </h2>
-      <p>
-        {% if section.extra.home_learn is defined and section.extra.home_learn.description is defined %}{{ section.extra.home_learn.description }}{% elif config.extra.home_learn is defined and config.extra.home_learn.description is defined %}{{ config.extra.home_learn.description }}{% else %}We are a product engineering company.{% endif %}
-      </p>
+    <div class="home-learn-intro">
+      <div class="home-learn-header">
+        <p class="hero-eyebrow">
+          {% if section.extra.home_learn is defined and section.extra.home_learn.eyebrow is defined %}{{ section.extra.home_learn.eyebrow }}{% elif config.extra.home_learn is defined and config.extra.home_learn.eyebrow is defined %}{{ config.extra.home_learn.eyebrow }}{% else %}Company{% endif %}
+        </p>
+        <h2 id="home-learn-title">
+          {% if section.extra.home_learn is defined and section.extra.home_learn.title is defined %}{{ section.extra.home_learn.title }}{% elif config.extra.home_learn is defined and config.extra.home_learn.title is defined %}{{ config.extra.home_learn.title }}{% else %}About Quad.io{% endif %}
+        </h2>
+        <p>
+          {% if section.extra.home_learn is defined and section.extra.home_learn.description is defined %}{{ section.extra.home_learn.description }}{% elif config.extra.home_learn is defined and config.extra.home_learn.description is defined %}{{ config.extra.home_learn.description }}{% else %}We are a product engineering company.{% endif %}
+        </p>
+      </div>
+
+      {% include "partials/devlab/home/hiring.html" %}
     </div>
 
     {% if has_home_learn_cards %}

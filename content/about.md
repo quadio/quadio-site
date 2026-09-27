@@ -24,7 +24,7 @@ Three constraints shape the work:
 
 ## Company
 
-Quad.io is based in the United States.
+We are made in USA. Quad.io has offices in Georgia and Florida.
 
 - General: [hello@quad.io](mailto:hello@quad.io)
 - Careers: [careers@quad.io](mailto:careers@quad.io)

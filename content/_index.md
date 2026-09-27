@@ -1,6 +1,7 @@
 +++
 title = "Clear inputs. Clear outputs."
 description = "We ship systems with honest edges: what goes in, what comes out, and who holds the records. Products that run without a screen."
+aliases = ["intro"]
 
 [extra]
 home_layout = "wide"
@@ -50,7 +51,7 @@ cards = [
   { kicker = "Work", title = "Product engineering", description = "Contract work and products with defined edges: what goes in, what comes out, and who holds the records." },
   { kicker = "Products", title = "Rgit and Burton", description = "A self-hosted git forge, and workspaces that run local models on your hardware. MIT-licensed, with managed services and developer time when you want them." },
   { kicker = "Custody", title = "Your records", description = "Software in formats you can export. Agents can operate it; humans review when judgment is required." },
-  { kicker = "Place", title = "Made in USA", description = "We are made in USA. Quad.io has offices in Georgia and Florida." },
+  { kicker = "Enclave", title = "Data stays put", description = "Local by default, on hardware you control. We can operate it with you; the records do not leave." },
 ]
 
 [extra.home_hiring]

@@ -1,6 +1,7 @@
 +++
 title = "About"
 description = "Quad.io is a product engineering company. We build screenless systems with honest I/O and records that stay in your custody."
+aliases = ["company"]
 +++
 
 Quad.io builds products that run without a screen. Scope and architecture are defined up front. We ship only what is necessary, with inspectable edges: what goes in, what comes out, and who holds the records.

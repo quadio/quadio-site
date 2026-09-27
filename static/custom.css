@@ -69,6 +69,14 @@ html[data-brand="quad"] .button {
 
 html[data-brand="quad"] .hero-wide {
   border-radius: 8px;
+  padding-top: clamp(var(--space-8), 5vw, var(--space-20));
+}
+
+@media (max-width: 760px) {
+  html[data-brand="quad"] .hero-wide {
+    padding: var(--space-6);
+    padding-bottom: calc(var(--space-6) + var(--space-10));
+  }
 }
 
 html[data-brand="quad"] .hero-with-media .hero-title {
@@ -78,8 +86,10 @@ html[data-brand="quad"] .hero-with-media .hero-title {
 html[data-brand="quad"] .hero-media {
   padding-block-start: 0;
   overflow: hidden;
+  border: 0;
   border-radius: 8px;
   background: #201a16;
+  box-shadow: none;
 }
 
 html[data-brand="quad"] .hero-media::before {

@@ -31,8 +31,7 @@
       <a
         class="button button-primary"
         href="{{<devlab.route_url path={product_cta_path} content_lang={lang} />}}"
-        target="_blank"
-        rel="noopener noreferrer"
+        {% if product_cta_path is starting_with(pat="http://") or product_cta_path is starting_with(pat="https://") %}target="_blank" rel="noopener noreferrer"{% endif %}
       >
         {{ product_cta_label }}
       </a>

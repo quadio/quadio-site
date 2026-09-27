@@ -1,11 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="An input enters a bounded system and leaves as an inspectable result.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="An input enters a bounded system and leaves as a result.">
   <rect width="1280" height="720" fill="#201A16"/>
-  <g fill="none" stroke="#3D342C" stroke-width="1">
-    <path d="M56 80 H1224"/>
-    <path d="M56 640 H1224"/>
-    <path d="M96 48 V672"/>
-    <path d="M1224 48 V672"/>
-  </g>
+  <g transform="translate(118.7 118.7) scale(0.985915) translate(-166.5 -108)">
 
   <g font-family="Avenir Next, Century Gothic, Futura, Trebuchet MS, sans-serif" font-weight="700" letter-spacing="0.12em">
     <text x="168" y="148" fill="#C8C8C8" font-size="40">INPUT</text>
@@ -47,7 +42,7 @@
   <!-- Output -->
   <g>
     <rect x="992" y="262" width="232" height="196" rx="12" fill="#005CC7"/>
-    <text x="1108" y="348" text-anchor="middle" fill="#FFFFFF" font-family="Avenir Next, Century Gothic, Futura, Trebuchet MS, sans-serif" font-size="48" font-weight="700">result</text>
-    <text x="1108" y="396" text-anchor="middle" fill="#D6E7FA" font-family="Avenir Next, Century Gothic, Futura, Trebuchet MS, sans-serif" font-size="32" font-weight="600">inspectable</text>
+    <text x="1108" y="372" text-anchor="middle" fill="#FFFFFF" font-family="Avenir Next, Century Gothic, Futura, Trebuchet MS, sans-serif" font-size="48" font-weight="700">result</text>
+  </g>
   </g>
 </svg>

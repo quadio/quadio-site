@@ -6,7 +6,7 @@ description = "We work on challenging problems and ship systems with honest edge
 home_layout = "wide"
 home_eyebrow = "Product Engineering"
 home_hero_image = "/images/hero/io.svg"
-home_hero_image_alt = "Inputs enter a bounded system and leave as an inspectable result."
+home_hero_image_alt = "Inputs enter a bounded system and leave as a result."
 home_primary_action_label = "Talk to us"
 home_primary_action_path = "mailto:hello@quad.io"
 home_secondary_action_label = "Approach"
@@ -33,11 +33,11 @@ id = "burton"
 eyebrow = ""
 title = "Burton Workspaces"
 badge = "MIT License"
-description = "Open-source business automation: wiki, messages, and knowledge that compound from people and agents. Self-host it or run it managed; the records stay yours."
+description = "Open-source business automation: wiki, messages, and knowledge that compound from people and agents. Run local models on on-prem hardware. We provide managed services and developer time. Your data never leaves your enclave."
 image = "/images/product/burton-lake.svg"
 image_alt = "Burton mountain mark: cool sky, lake ridges, and still water."
-cta_label = ""
-cta_path = ""
+cta_label = "Contact Us"
+cta_path = "mailto:hello@quad.io"
 
 [extra.home_learn]
 eyebrow = "Company"
@@ -45,7 +45,7 @@ title = "About Quad.io"
 description = "We are a product engineering company. We build systems you can inspect, run without a screen, and keep in your own custody."
 cards = [
   { kicker = "Work", title = "Product engineering", description = "Contract work and products with defined edges: what goes in, what comes out, and who holds the records." },
-  { kicker = "Products", title = "Rgit and Burton", description = "A self-hosted git forge and open-source business automation. MIT-licensed, local by default." },
+  { kicker = "Products", title = "Rgit and Burton", description = "A self-hosted git forge, and workspaces that run local models on your hardware. MIT-licensed, with managed services and developer time when you want them." },
   { kicker = "Custody", title = "Your records", description = "Software in formats you can export. Agents can operate it; humans review when judgment is required." },
   { kicker = "Place", title = "Made in USA", description = "We are made in USA. Quad.io has offices in Georgia and Florida." },
 ]

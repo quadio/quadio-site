@@ -12,7 +12,7 @@ Agents can configure and operate the system. Humans review when judgment is requ
 Current products:
 
 - [Rgit](https://rgit.rs/) — a self-hosted git forge with SSH remotes, merge requests, and in-repo workflows. Conventional Commits and SemVer by default. No website on the host.
-- Burton Workspaces — open-source business automation: wiki, messages, and knowledge that compound from people and agents. Self-host it or run it managed; the records stay yours.
+- Burton Workspaces — open-source business automation: wiki, messages, and knowledge that compound from people and agents. Run local models on on-prem hardware. We provide managed services and developer time. Your data never leaves your enclave.
 
 ## How we work
 

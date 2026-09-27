@@ -23,6 +23,14 @@
 {% if section.extra.home_hero_image_alt is defined %}
 {% set home_hero_image_alt = section.extra.home_hero_image_alt %}
 {% endif %}
+{% set home_hero_background = config.extra.home_hero_background | default(value="") %}
+{% if section.extra.home_hero_background is defined %}
+{% set home_hero_background = section.extra.home_hero_background %}
+{% endif %}
+{% set home_hero_background_alt = config.extra.home_hero_background_alt | default(value="") %}
+{% if section.extra.home_hero_background_alt is defined %}
+{% set home_hero_background_alt = section.extra.home_hero_background_alt %}
+{% endif %}
 {% set home_eyebrow = config.extra.home_eyebrow | default(value="Developer-first Zola theme") %}
 {% if section.extra.home_eyebrow is defined %}
 {% set home_eyebrow = section.extra.home_eyebrow %}
@@ -48,8 +56,10 @@
 {% endif %}
 
 <div class="home-page{% if home_layout == 'wide' %} home-page-wide{% else %} home-page-default{% endif %}">
+<div class="home-first-screen">
 {% include "partials/devlab/home/hero.html" %}
 {% include "partials/devlab/home/features.html" %}
+</div>
 
 {% set has_home_product = false %}
 {% if section.extra.home_products is defined or config.extra.home_products is defined or section.extra.home_product is defined or config.extra.home_product is defined %}

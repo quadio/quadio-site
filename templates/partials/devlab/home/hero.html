@@ -1,6 +1,18 @@
-{# Site override: skip get_image_metadata for SVG hero art (Zola cannot read SVG). #}
+{# Site override: optional photo background with overlaid copy; skip SVG metadata. #}
 {% set has_home_hero_lead = section.description or section.content or home_primary_action_path or home_secondary_action_path %}
-<section class="hero{% if home_layout == 'wide' %} hero-wide{% if home_hero_image %} hero-with-media{% endif %}{% endif %}">
+<section class="hero{% if home_layout == 'wide' %} hero-wide{% if home_hero_image %} hero-with-media{% endif %}{% if home_hero_background %} hero-with-photo{% endif %}{% endif %}">
+  {% if home_hero_background %}
+  <figure class="hero-photo">
+    <img
+      src="{{<devlab.url path={home_hero_background} />}}"
+      alt="{{ home_hero_background_alt }}"
+      width="1920"
+      height="1080"
+      decoding="async"
+      fetchpriority="high"
+    >
+  </figure>
+  {% endif %}
   <div class="hero-copy">
     <div class="hero-heading">
       <p class="hero-eyebrow">{{ home_eyebrow }}</p>

@@ -40,16 +40,41 @@
   </div>
   {% if product_aside_image %}
   <figure class="home-product-media home-product-aside">
-    <img
-      src="{{<devlab.url path={product_aside_image} />}}"
-      alt="{{ product_aside_image_alt }}"
-      width="480"
-      height="360"
-      decoding="async"
+    <button
+      type="button"
+      class="home-product-aside-open"
+      data-chassis-open="{{ product_dom_id }}-viewer"
+      aria-haspopup="dialog"
+      aria-controls="{{ product_dom_id }}-viewer"
+      aria-label="Open 3D view of {{ product_title }}"
     >
+      <img
+        src="{{<devlab.url path={product_aside_image} />}}"
+        alt=""
+        width="480"
+        height="360"
+        decoding="async"
+      >
+    </button>
     {% if product_aside_caption %}
     <figcaption class="home-product-aside-caption">{{ product_aside_caption }}</figcaption>
     {% endif %}
   </figure>
   {% endif %}
 </section>
+{% if product_aside_image %}
+<dialog class="chassis-viewer" id="{{ product_dom_id }}-viewer" aria-labelledby="{{ product_dom_id }}-viewer-title">
+  <div class="chassis-viewer-panel">
+    <div class="chassis-viewer-bar">
+      <h2 id="{{ product_dom_id }}-viewer-title">{{ product_title }}</h2>
+      <button type="button" class="chassis-viewer-close" data-chassis-close aria-label="Close 3D view">
+        Close
+      </button>
+    </div>
+    <div class="chassis-viewer-stage" data-chassis-stage>
+      <p class="chassis-viewer-status" data-chassis-status>Loading 3D view…</p>
+    </div>
+    <p class="chassis-viewer-hint">Drag to rotate</p>
+  </div>
+</dialog>
+{% endif %}

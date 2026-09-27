@@ -165,7 +165,33 @@ html[data-brand="quad"] #product-burton .home-product-media {
 
 html[data-brand="quad"] #product-burton .home-product-aside {
   position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(244, 242, 240, 0.34);
+  border-radius: 12px;
   background: #201a16;
+}
+
+html[data-brand="quad"] #product-burton .home-product-aside:hover,
+html[data-brand="quad"] #product-burton .home-product-aside:focus-within {
+  border-color: rgba(244, 242, 240, 0.55);
+}
+
+html[data-brand="quad"] .home-product-aside-open {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  min-height: 11rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+html[data-brand="quad"] .home-product-aside-open:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: -3px;
 }
 
 html[data-brand="quad"] #product-burton .home-product-aside img {
@@ -183,6 +209,104 @@ html[data-brand="quad"] .home-product-aside-caption {
   font-weight: 300;
   letter-spacing: 0.14em;
   line-height: 1;
+  pointer-events: none;
+}
+
+html[data-brand="quad"] .chassis-viewer {
+  width: min(92vw, 56rem);
+  height: min(86vh, 42rem);
+  max-width: none;
+  max-height: none;
+  padding: 0;
+  border: 1px solid rgba(244, 242, 240, 0.28);
+  border-radius: 12px;
+  background: #201a16;
+  color: #f7f6f4;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
+}
+
+html[data-brand="quad"] .chassis-viewer::backdrop {
+  background: rgba(32, 26, 22, 0.72);
+}
+
+html[data-brand="quad"] .chassis-viewer-panel {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  height: 100%;
+}
+
+html[data-brand="quad"] .chassis-viewer-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: 0.85rem 1rem 0.7rem;
+}
+
+html[data-brand="quad"] .chassis-viewer-bar h2 {
+  margin: 0;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+html[data-brand="quad"] .chassis-viewer-close {
+  margin: 0;
+  padding: 0.25rem 0.55rem;
+  border: 1px solid rgba(244, 242, 240, 0.28);
+  border-radius: 2px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+html[data-brand="quad"] .chassis-viewer-close:hover,
+html[data-brand="quad"] .chassis-viewer-close:focus-visible {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  outline: none;
+}
+
+html[data-brand="quad"] .chassis-viewer-stage {
+  position: relative;
+  min-height: 0;
+  background: #201a16;
+}
+
+html[data-brand="quad"] .chassis-viewer-stage canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  touch-action: none;
+}
+
+html[data-brand="quad"] .chassis-viewer-stage canvas:active {
+  cursor: grabbing;
+}
+
+html[data-brand="quad"] .chassis-viewer-status,
+html[data-brand="quad"] .chassis-viewer-hint {
+  margin: 0;
+  color: rgba(244, 242, 240, 0.72);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+}
+
+html[data-brand="quad"] .chassis-viewer-status {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+}
+
+html[data-brand="quad"] .chassis-viewer-hint {
+  padding: 0.55rem 1rem 0.85rem;
+  text-align: center;
 }
 
 html[data-brand="quad"] .home-product-heading {

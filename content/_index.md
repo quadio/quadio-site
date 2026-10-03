@@ -19,6 +19,17 @@ home_features = [
 ]
 
 [[extra.home_products]]
+id = "burton-apps"
+eyebrow = "Android"
+title = "Burton Apps"
+badge = "MIT License"
+description = "Signed Android APKs from GitHub Releases. Start with Burton App Hub, then install the rest from the catalog: meetings, photos, weather, and more. GrapheneOS-ready."
+image = "/images/product/burton-apps.svg"
+image_alt = "Burton Apps mark: the lake ridges in a rounded app icon, with a launcher grid in the sky."
+cta_label = "Visit Burton Apps"
+cta_path = "https://apps.burton.work"
+
+[[extra.home_products]]
 id = "burton"
 eyebrow = "Mk1"
 title = "Burton Workspaces"
@@ -28,7 +39,7 @@ image = "/images/product/burton-lake.svg"
 image_alt = "Burton mountain mark: cool sky, lake ridges, and still water."
 aside_image = "/images/product/burton-mk1.png"
 aside_image_alt = "Burton Mk1 compact enclave chassis."
-aside_caption = "mk1"
+aside_caption = "MK1"
 cta_label = "Contact Us"
 cta_path = "mailto:hello@quad.io"
 
@@ -49,7 +60,7 @@ title = "About Quad.io"
 description = "We are a product engineering company. We build systems you can inspect, run without a screen, and keep in your own custody."
 cards = [
   { kicker = "Work", title = "Product engineering", description = "Contract work and products with defined edges: what goes in, what comes out, and who holds the records." },
-  { kicker = "Products", title = "Rgit and Burton", description = "A self-hosted git forge, and workspaces that run local models on your hardware. MIT-licensed, with managed services and developer time when you want them." },
+  { kicker = "Products", title = "Burton, apps, and Rgit", description = "Workspaces that run local models on your hardware, signed Android apps from GitHub, and a self-hosted git forge. MIT-licensed, with managed services and developer time when you want them." },
   { kicker = "Custody", title = "Your records", description = "Software in formats you can export. Agents can operate it; humans review when judgment is required." },
   { kicker = "Enclave", title = "Data stays put", description = "Local by default, on hardware you control. We can operate it with you; the records do not leave." },
 ]

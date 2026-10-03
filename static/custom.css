@@ -322,6 +322,10 @@ html[data-brand="quad"] #product-rgit .home-product-media {
   background: #0c241c;
 }
 
+html[data-brand="quad"] #product-burton-apps .home-product-media {
+  background: #0a1824;
+}
+
 html[data-brand="quad"] #product-burton .home-product-media {
   background: #0d1a28;
 }

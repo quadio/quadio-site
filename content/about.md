@@ -12,6 +12,7 @@ Agents can configure and operate the system. Humans review when judgment is requ
 
 Current products:
 
+- [Burton Apps](https://apps.burton.work/) — signed Android APKs from GitHub Releases. Start with Burton App Hub, then install the rest from the catalog. GrapheneOS-ready.
 - [Rgit](https://rgit.rs/) — a self-hosted git forge with SSH remotes, merge requests, and in-repo workflows. Conventional Commits and SemVer by default. No website on the host.
 - Burton Workspaces — open-source business automation: wiki, messages, and knowledge that compound from people and agents. Run local models on-prem. We provide managed services and developer time. Your data never leaves your enclave.
 

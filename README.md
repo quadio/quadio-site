@@ -12,6 +12,7 @@ This repository is an [rsites](https://github.com/Burton-Workspaces/rabun-sites)
 | `zola.toml` | Brand, nav, DevLab extras |
 | `rsites.toml` | Theme pin, hostname, Caddy document root |
 | `templates/`, `static/` | Site overlays (do not edit `themes/`) |
+| `deploy/ubuntu/` | Bare-metal Ubuntu install (`push.sh --pack`) |
 | `deploy/digitalocean/` | Droplet install and Caddy virtual host |
 
 ## Requirements
@@ -112,5 +113,66 @@ tar -C public -czf /tmp/quadio-site.tar.gz .
 | `/etc/caddy/sites-enabled/quadio-site.caddy` | www + apex virtual hosts |
 | `/etc/caddy/Caddyfile` | `import /etc/caddy/sites-enabled/*` plus any sites you already had |
 | `/etc/quadio-site/site.env` | health-check URL and `Host` header |
+
+Logs: `journalctl -u caddy -f`. Do not wipe `/var/lib/caddy` (ACME store).
+
+## Ubuntu (bare metal)
+
+Same archive on an x86_64 Ubuntu host that may already run other Caddy sites. The server never talks to GitHub. Bootstrap does not replace an existing Caddyfile, does not enable ufw unless it is already active (or `SITE_ENABLE_UFW=1`), and refuses a `--domain` that another Caddy snippet already serves.
+
+This is the sibling of the DigitalOcean droplet path above. Production auto-deploys after a push to `master`. Ubuntu does **not** — use `deploy/ubuntu/push.sh --pack`.
+
+```
+Internet → Caddy :443 (optional, site snippet only) → /var/www/quadio-site
+                                                    → :8080 when no domain is set
+```
+
+### 1. Server
+
+Ubuntu 24.04 LTS (or 26.04), x86_64. SSH as `root` or a sudoer. From a laptop, `push.sh` allocates a TTY so sudo can prompt for a password.
+
+### 2. Bootstrap (once)
+
+```bash
+./deploy/ubuntu/push.sh --pack --bootstrap --domain www.quad.io user@HOST
+```
+
+Omit `--domain` to listen on **:8080**. On a LAN hostname that cannot use Let's Encrypt:
+
+```bash
+./deploy/ubuntu/push.sh --pack --bootstrap --domain damascus --tls lan user@192.168.0.18
+```
+
+Trust `/etc/quadio-site/tls/lan-root.crt` on each device, then open `https://damascus`. On a fresh box with no firewall yet:
+
+```bash
+SITE_ENABLE_UFW=1 ./deploy/ubuntu/push.sh --pack --bootstrap user@HOST
+```
+
+Do **not** `curl | bash` the bootstrap script from `raw.githubusercontent.com`.
+
+### 3. Later updates
+
+```bash
+./deploy/ubuntu/push.sh --pack user@HOST
+```
+
+Two-step (inspect the archive first):
+
+```bash
+./deploy/ubuntu/pack.sh
+# dist/quadio-site.tar.gz
+./deploy/ubuntu/push.sh --archive dist/quadio-site.tar.gz user@HOST
+```
+
+### Layout on the server
+
+| Path | Role |
+| --- | --- |
+| `/var/www/quadio-site` | published `public/` tree |
+| `/etc/caddy/sites-enabled/quadio-site.caddy` | Caddy site snippet |
+| `/etc/caddy/Caddyfile` | `import /etc/caddy/sites-enabled/*` plus any sites you already had |
+| `/etc/quadio-site/site.env` | health-check URL, hostname, optional `SITE_TLS` |
+| `/etc/quadio-site/tls/lan-root.crt` | Caddy local CA when `--tls lan` |
 
 Logs: `journalctl -u caddy -f`. Do not wipe `/var/lib/caddy` (ACME store).

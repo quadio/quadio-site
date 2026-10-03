@@ -66,7 +66,12 @@
 <dialog class="chassis-viewer" id="{{ product_dom_id }}-viewer" aria-labelledby="{{ product_dom_id }}-viewer-title">
   <div class="chassis-viewer-panel">
     <div class="chassis-viewer-bar">
-      <h2 id="{{ product_dom_id }}-viewer-title">{{ product_title }}</h2>
+      <div class="chassis-viewer-identity">
+        <h2 id="{{ product_dom_id }}-viewer-title">{{ product_title }}</h2>
+        {% if product_aside_caption %}
+        <p class="chassis-viewer-model">{{ product_aside_caption }}</p>
+        {% endif %}
+      </div>
       <button type="button" class="chassis-viewer-close" data-chassis-close aria-label="Close 3D view">
         Close
       </button>

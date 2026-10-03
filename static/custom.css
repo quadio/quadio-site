@@ -410,11 +410,29 @@ html[data-brand="quad"] .chassis-viewer-bar {
   padding: 0.85rem 1rem 0.7rem;
 }
 
+html[data-brand="quad"] .chassis-viewer-identity {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.45rem 0.75rem;
+  min-width: 0;
+}
+
 html[data-brand="quad"] .chassis-viewer-bar h2 {
   margin: 0;
   font-size: var(--text-sm);
   font-weight: 600;
   letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+html[data-brand="quad"] .chassis-viewer-model {
+  margin: 0;
+  color: rgba(244, 242, 240, 0.72);
+  font-size: var(--text-xs);
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  line-height: 1;
   text-transform: uppercase;
 }
 
@@ -542,7 +560,7 @@ html[data-brand="quad"] [id^="product-"] {
 
 html[data-brand="quad"] .home-learn {
   margin-top: 0;
-  padding-top: 0.5rem;
+  padding-top: var(--space-6);
 }
 
 html[data-brand="quad"] .home-learn-overview {
@@ -655,14 +673,8 @@ html[data-brand="quad"] .home-hiring .hero-actions {
     justify-self: start;
   }
 
-  html[data-brand="quad"] .home-learn {
-    padding-top: var(--space-6);
-  }
-
   html[data-brand="quad"] .home-learn-intro {
-    padding-inline-start: calc(
-      var(--product-pad-inline) + var(--product-logo-col) + var(--product-row-gap)
-    );
+    padding-inline-start: var(--product-pad-inline);
   }
 
   html[data-brand="quad"] .hero-photo img {

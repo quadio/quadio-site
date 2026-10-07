@@ -44,6 +44,17 @@ cta_label = "Visit Burton Apps"
 cta_path = "https://apps.burton.work"
 
 [[extra.home_products]]
+id = "rabun-sh"
+eyebrow = "Notify"
+title = "Rabun.sh"
+badge = "MIT License"
+description = "HTTP pub-sub push notifications. Publish with curl. The API is ntfy-compatible: phone apps, a browser PWA, and desktop toasts. Topics are the password. You host the hub."
+image = "/images/product/rabun-sh.svg"
+image_alt = "Rabun.sh mark: gold sky, pine ridges, and a stacked notification toast."
+cta_label = "Visit Rabun.sh"
+cta_path = "https://rabun.sh/"
+
+[[extra.home_products]]
 id = "rgit"
 eyebrow = ""
 title = "Rgit"
@@ -60,7 +71,7 @@ title = "About Quad.io"
 description = "We are a product engineering company. We build systems you can inspect, run without a screen, and keep in your own custody."
 cards = [
   { kicker = "Work", title = "Product engineering", description = "Contract work and products with defined edges: what goes in, what comes out, and who holds the records." },
-  { kicker = "Products", title = "Burton OS, apps, and Rgit", description = "Burton OS running local models on your hardware, signed Android apps from GitHub, and a self-hosted git forge. MIT-licensed, with managed services and developer time when you want them." },
+  { kicker = "Products", title = "Burton OS, apps, Rabun.sh, and Rgit", description = "Burton OS running local models on your hardware, signed Android apps from GitHub, self-hosted push notifications, and a git forge. MIT-licensed, with managed services and developer time when you want them." },
   { kicker = "Custody", title = "Your records", description = "Software in formats you can export. Agents can operate it; humans review when judgment is required." },
   { kicker = "Enclave", title = "Data stays put", description = "Local by default, on hardware you control. We can operate it with you; the records do not leave." },
 ]

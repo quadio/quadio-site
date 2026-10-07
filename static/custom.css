@@ -381,7 +381,8 @@ html[data-brand="quad"] .home-product-media img {
   padding: clamp(0.3rem, 1vw, 0.65rem);
 }
 
-html[data-brand="quad"] #product-rgit .home-product-media {
+html[data-brand="quad"] #product-rgit .home-product-media,
+html[data-brand="quad"] #product-rabun-sh .home-product-media {
   background: #0c241c;
 }
 

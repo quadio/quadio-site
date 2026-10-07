@@ -14,6 +14,7 @@ Current products:
 
 - [Burton OS](https://burton.work) — open-source business automation: wiki, messages, and knowledge that compound from people and agents. Run local models on-prem. We provide managed services and developer time. Your data never leaves your enclave.
 - [Burton Apps](https://apps.burton.work/) — signed Android APKs from GitHub Releases. Start with Burton App Hub, then install the rest from the catalog. GrapheneOS-ready.
+- [Rabun.sh](https://rabun.sh/) — self-hosted HTTP pub-sub notifications. Publish with curl. ntfy-compatible: phone apps, a browser PWA, and desktop toasts. Topics are the password.
 - [Rgit](https://rgit.rs/) — a self-hosted git forge with SSH remotes, merge requests, and in-repo workflows. Conventional Commits and SemVer by default. No website on the host.
 
 ## How we work

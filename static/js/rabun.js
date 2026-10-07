@@ -131,7 +131,7 @@
         throw new Error(body.error || "submit failed (" + response.status + ")");
       }
       form.reset();
-      setStatus("Sent. Submission " + (body.id || "accepted") + ".", "ok");
+      setStatus("Message sent.", "ok");
       form.dispatchEvent(new CustomEvent("rabun:sent", { detail: body }));
       return body;
     } catch (error) {

@@ -12,9 +12,9 @@ Agents can configure and operate the system. Humans review when judgment is requ
 
 Current products:
 
+- [Burton OS](https://burton.work) — open-source business automation: wiki, messages, and knowledge that compound from people and agents. Run local models on-prem. We provide managed services and developer time. Your data never leaves your enclave.
 - [Burton Apps](https://apps.burton.work/) — signed Android APKs from GitHub Releases. Start with Burton App Hub, then install the rest from the catalog. GrapheneOS-ready.
 - [Rgit](https://rgit.rs/) — a self-hosted git forge with SSH remotes, merge requests, and in-repo workflows. Conventional Commits and SemVer by default. No website on the host.
-- Burton Workspaces — open-source business automation: wiki, messages, and knowledge that compound from people and agents. Run local models on-prem. We provide managed services and developer time. Your data never leaves your enclave.
 
 ## How we work
 
@@ -28,7 +28,7 @@ Three constraints shape the work:
 
 We are made in USA. Quad.io has offices in Georgia and Florida.
 
-- General: [hello@quad.io](mailto:hello@quad.io)
+- General: [Contact](/contact/)
 - Careers: [careers@quad.io](mailto:careers@quad.io)
 
 We are hiring. See [Careers](/careers/) for how to reach us. Privacy practices for this site are on [Privacy](/privacy/).

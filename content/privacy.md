@@ -9,10 +9,11 @@ This policy covers [www.quad.io](https://www.quad.io) and email you send to Quad
 
 ## What we collect
 
-This website is a static brochure. It does not create accounts, take payments, or host forms.
+This website is a static brochure. It does not create accounts or take payments.
 
 We may have:
 
+- **Contact form.** The [contact](/contact/) page encrypts your name, email, and message in the browser with our OpenPGP public key, then posts the ciphertext to [form-submit.quad.io](https://form-submit.quad.io). That host stores the ciphertext and can email it to us as PGP/MIME. The form host does not see the fields. We decrypt the message on our mail client.
 - **Email you send us.** Messages to [hello@quad.io](mailto:hello@quad.io), [careers@quad.io](mailto:careers@quad.io), or other Quad.io addresses, including names, contact details, and anything else you include.
 - **Color-mode preference.** If you set light or dark mode, that choice is stored in your browser's local storage. It does not leave your device.
 - **Ordinary server logs.** Our host may record request data such as IP address, time, and browser type in order to run and protect the site.
@@ -48,7 +49,7 @@ We keep email and related records as long as needed for the conversation, the ap
 
 Depending on where you live, you may have the right to ask what we hold about you, to correct it, to delete it, or to limit how we use it. We will honor those requests as required by applicable law.
 
-To make a request, write to [hello@quad.io](mailto:hello@quad.io). We may need to confirm it is you.
+To make a request, use [Contact](/contact/) or write to [hello@quad.io](mailto:hello@quad.io). We may need to confirm it is you.
 
 ## Children
 
@@ -64,4 +65,4 @@ Quad.io
 United States  
 Offices in Georgia and Florida
 
-[hello@quad.io](mailto:hello@quad.io)
+[Contact](/contact/) or [hello@quad.io](mailto:hello@quad.io)

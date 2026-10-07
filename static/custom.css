@@ -71,6 +71,69 @@ html[data-brand="quad"] .button {
   border-radius: 2px;
 }
 
+html[data-brand="quad"] .contact-form {
+  display: grid;
+  gap: 0.35rem;
+  max-width: 32rem;
+  margin-top: var(--space-8);
+  padding: 1.25rem 1.35rem 1.4rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+}
+
+html[data-brand="quad"] .contact-form label {
+  margin-top: 0.7rem;
+  color: var(--color-fg);
+  font-size: 0.95rem;
+}
+
+html[data-brand="quad"] .contact-form input,
+html[data-brand="quad"] .contact-form textarea {
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font: inherit;
+}
+
+html[data-brand="quad"] .contact-form textarea {
+  min-height: 10rem;
+  resize: vertical;
+}
+
+html[data-brand="quad"] .contact-form .button {
+  width: fit-content;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+html[data-brand="quad"] .contact-form .button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+html[data-brand="quad"] .contact-form-honeypot {
+  position: absolute;
+  left: -9999px;
+}
+
+html[data-brand="quad"] .contact-form-status {
+  min-height: 1.4rem;
+  margin: 0.75rem 0 0;
+  color: var(--color-muted);
+}
+
+html[data-brand="quad"] .contact-form-status[data-kind="ok"] {
+  color: var(--color-accent);
+}
+
+html[data-brand="quad"] .contact-form-status[data-kind="error"] {
+  color: #c44a3a;
+}
+
 html[data-brand="quad"] .hero-wide {
   border-radius: 8px;
   padding-top: clamp(var(--space-8), 5vw, var(--space-20));

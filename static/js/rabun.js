@@ -55,12 +55,27 @@
     return lines.join("\n") + "\n";
   }
 
+  const pubkeyCache = new Map();
+
   async function fetchPublicKey(url) {
-    const response = await fetch(url, { headers: { Accept: "application/pgp-keys, text/plain" } });
-    if (!response.ok) {
-      throw new Error("failed to fetch public key from " + url);
+    if (pubkeyCache.has(url)) {
+      return pubkeyCache.get(url);
     }
-    return response.text();
+    const pending = fetch(url, { headers: { Accept: "application/pgp-keys, text/plain" } }).then(
+      async (response) => {
+        if (!response.ok) {
+          throw new Error("failed to fetch public key from " + url);
+        }
+        return response.text();
+      }
+    );
+    pubkeyCache.set(url, pending);
+    try {
+      return await pending;
+    } catch (error) {
+      pubkeyCache.delete(url);
+      throw error;
+    }
   }
 
   async function encryptYaml(yaml, armoredKey) {
@@ -105,6 +120,7 @@
       const yaml = formToYaml(form, formName);
       const publicKey = await fetchPublicKey(pubkeyUrl);
       const ciphertext = await encryptYaml(yaml, publicKey);
+      setStatus("Sending…", "pending");
       const response = await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -137,7 +153,11 @@
   }
 
   function bindAll(root) {
-    (root || document).querySelectorAll("form[data-rabun]").forEach((form) => bind(form));
+    (root || document).querySelectorAll("form[data-rabun]").forEach((form) => {
+      const pubkeyUrl = form.getAttribute("data-rabun-pubkey") || DEFAULT_PUBKEY;
+      fetchPublicKey(pubkeyUrl).catch(() => {});
+      bind(form);
+    });
   }
 
   globalThis.Rabun = { bind, bindAll, submitForm, formToYaml, encryptYaml };
